@@ -1,7 +1,9 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import HeroBanner from '../components/landing/HeroBanner';
 import AboutUs from '../components/landing/AboutUs';
 import MissionAndValues from '../components/landing/MissionAndValues';
+import Brotherhood from '../components/landing/Brotherhood';
 import WhereWeHaveWorked from '../components/landing/WhereWeHaveWorked';
 
 const Home = () => {
@@ -11,10 +13,9 @@ const Home = () => {
       <HeroBanner />
       <AboutUs />
       <MissionAndValues />
+      <Brotherhood />
       <WhereWeHaveWorked />
-      <main className="flex-grow">
-        {/* Your main content goes here */}
-      </main>
+      <Footer />
     </div>
   );
 };
