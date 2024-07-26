@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Julia Purwadi",
+    "role": "President",
+    "pledgeClass": "Spring 2024",
+    "major": "Business Administration",
+    "description": "Julia is a senior majoring in Business Administration. She has been an active member of Alpha Zeta since her freshman year and is passionate about leadership and community service.",
+    "image": "/members/julia.png",
+    "linkedin": "https://www.linkedin.com/in/juliapurwadi/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Eddie Wang",
+    "role": "Master of Rituals",
+    "pledgeClass": "Fall 2023",
+    "major": "Economics",
+    "description": "Eddie is a junior majoring in Economics. He has been an active member of Alpha Zeta since his sophomore year and is passionate about rituals and traditions.",
+    "image": "/members/eddie.png",
+    "linkedin": "https://www.linkedin.com/in/edwardwngg/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Brandon Chung",
+    "role": "Vice President of Finance",
+    "pledgeClass": "Fall 2023",
+    "major": "Finance",
+    "description": "Brandon is a junior majoring in Finance. He has been an active member of Alpha Zeta since his sophomore year and is passionate about financial management.",
+    "image": "/members/brandon.png",
+    "linkedin": "https://www.linkedin.com/in/-brandon-chung-/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Julie Wan",
+    "role": "Co-Vice President of Public Relations",
+    "pledgeClass": "Fall 2023",
+    "major": "Marketing",
+    "description": "Julie is a junior majoring in Marketing. She has been an active member of Alpha Zeta since her sophomore year and is passionate about public relations.",
+    "image": "/members/julie.png",
+    "linkedin": "https://www.linkedin.com/in/julie-wan-usc/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Fiona Ko",
+    "role": "Co-Vice President of Public Relations",
+    "pledgeClass": "Fall 2023",
+    "major": "Marketing",
+    "description": "Fiona is a junior majoring in Marketing. She has been an active member of Alpha Zeta since her sophomore year and is passionate about public relations.",
+    "image": "/members/fiona.png",
+    "linkedin": "https://www.linkedin.com/in/fionako923/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Jocelyn Tang",
+    "role": "Co-Vice President of Social Affairs",
+    "pledgeClass": "Fall 2023",
+    "major": "Communications",
+    "description": "Jocelyn is a junior majoring in Communications. She has been an active member of Alpha Zeta since her sophomore year and is passionate about social affairs.",
+    "image": "/members/jocelyn.png",
+    "linkedin": "https://www.linkedin.com/in/jocelyntang45/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Anya Yang",
+    "role": "Co-Vice President of Social Affairs",
+    "pledgeClass": "Fall 2022",
+    "major": "Communications",
+    "description": "Anya is a senior majoring in Communications. She has been an active member of Alpha Zeta since her freshman year and is passionate about social affairs.",
+    "image": "/members/anya.png",
+    "linkedin": "https://www.linkedin.com/in/anyayang/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Austin Lin",
+    "role": "Vice President of Administration",
+    "pledgeClass": "Spring 2024",
+    "major": "Business Administration",
+    "description": "Austin is a senior majoring in Business Administration. He has been an active member of Alpha Zeta since his freshman year and is passionate about administration.",
+    "image": "/members/austin.png",
+    "linkedin": "https://www.linkedin.com/in/austin-lin0405/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Justin Xiang",
+    "role": "Secretary",
+    "pledgeClass": "Fall 2023",
+    "major": "Economics",
+    "description": "Justin is a junior majoring in Economics. He has been an active member of Alpha Zeta since his sophomore year and is passionate about administration.",
+    "image": "/members/justin.png",
+    "linkedin": "https://www.linkedin.com/in/justin-xiang12/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Charlie Huang",
+    "role": "AZ 13 Head",
+    "pledgeClass": "Fall 2022",
+    "major": "Computer Science",
+    "description": "Charlie is a senior majoring in Computer Science. He has been an active member of Alpha Zeta since his freshman year and is passionate about group leadership.",
+    "image": "/members/charlie.png",
+    "linkedin": "https://www.linkedin.com/in/charleshuang2004/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Fiona Ko",
+    "role": "AZ 13 Head",
+    "pledgeClass": "Fall 2023",
+    "major": "Computer Science",
+    "description": "Fiona is a junior majoring in Computer Science. She has been an active member of Alpha Zeta since her sophomore year and is passionate about group leadership.",
+    "image": "/members/fiona.png",
+    "linkedin": "https://www.linkedin.com/in/fionako923/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Renee Zhu",
+    "role": "AZ Computer Science Head",
+    "pledgeClass": "Fall 2023",
+    "major": "Computer Science",
+    "description": "Renee is a junior majoring in Computer Science. She has been an active member of Alpha Zeta since her sophomore year and is passionate about computer science.",
+    "image": "/members/renee.png",
+    "linkedin": "https://www.linkedin.com/in/renee-zhu-4581672b3/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Aaditya Surya",
+    "role": "AZ Computer Science Head",
+    "pledgeClass": "Fall 2023",
+    "major": "Computer Science",
+    "description": "Aaditya is a junior majoring in Computer Science. He has been an active member of Alpha Zeta since his sophomore year and is passionate about computer science.",
+    "image": "/members/aaditya.png",
+    "linkedin": "https://www.linkedin.com/in/aadityasurya/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Eddie Wang",
+    "role": "AZ Consulting Head",
+    "pledgeClass": "Fall 2023",
+    "major": "Business Administration",
+    "description": "Eddie is a junior majoring in Business Administration. He has been an active member of Alpha Zeta since his sophomore year and is passionate about consulting.",
+    "image": "/members/eddie.png",
+    "linkedin": "https://www.linkedin.com/in/edwardwngg/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Anson Chu",
+    "role": "AZ Consulting Head",
+    "pledgeClass": "Spring 2024",
+    "major": "Business Administration",
+    "description": "Anson is a senior majoring in Business Administration. He has been an active member of Alpha Zeta since his freshman year and is passionate about consulting.",
+    "image": "/members/anson.png",
+    "linkedin": "https://www.linkedin.com/in/ansonsch/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Elena Mao",
+    "role": "AZ Accounting Head",
+    "pledgeClass": "Fall 2022",
+    "major": "Accounting",
+    "description": "Elena is a senior majoring in Accounting. She has been an active member of Alpha Zeta since her freshman year and is passionate about accounting.",
+    "image": "/members/elena.png",
+    "linkedin": "https://www.linkedin.com/in/elena-mao/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Yuna Jang",
+    "role": "AZ Marketing Head",
+    "pledgeClass": "Spring 2024",
+    "major": "Marketing",
+    "description": "Yuna is a senior majoring in Marketing. She has been an active member of Alpha Zeta since her freshman year and is passionate about marketing.",
+    "image": "/members/yuna.png",
+    "linkedin": "https://www.linkedin.com/in/yunajang/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Rachel Lee",
+    "role": "AZ Marketing Head",
+    "pledgeClass": "Spring 2024",
+    "major": "Marketing",
+    "description": "Rachel is a senior majoring in Marketing. She has been an active member of Alpha Zeta since her freshman year and is passionate about marketing.",
+    "image": "/members/rachel.png",
+    "linkedin": "https://www.linkedin.com/in/rachel-lee318/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Darren Tsang",
+    "role": "AZ Entrepreneurship Head",
+    "pledgeClass": "Spring 2024",
+    "major": "Entrepreneurship",
+    "description": "Darren is a senior majoring in Entrepreneurship. He has been an active member of Alpha Zeta since his freshman year and is passionate about entrepreneurship.",
+    "image": "/members/darren.png",
+    "linkedin": "https://www.linkedin.com/in/darren-tsang/",
+    "designation": "AZ Group Head"
+  },
+  {
+    "name": "Aidan Han",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Aidan is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/aidan.png",
+    "linkedin": "https://www.linkedin.com/in/aidanhan123/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Ella Kang",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Ella is a sophomore who is actively exploring her interests and passions.",
+    "image": "/members/ella.png",
+    "linkedin": "https://www.linkedin.com/in/ella-kang/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Daniel Yang",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Daniel is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/daniel.png",
+    "linkedin": "https://www.linkedin.com/in/danielyangdev/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Jason Byun",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Jason is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/jasonb.png",
+    "linkedin": "https://www.linkedin.com/in/jason-byun/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Jason Zhang",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Jason is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/jasonz.png",
+    "linkedin": "https://www.linkedin.com/in/jczhang05/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Chris Feng",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Chris is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/chris.png",
+    "linkedin": "https://www.linkedin.com/in/christopher-feng0/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Esther Ji",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Esther is a sophomore who is actively exploring her interests and passions.",
+    "image": "/members/esther.png",
+    "linkedin": "https://www.linkedin.com/in/estherxrji/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Eugene Park",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Eugene is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/eugene.png",
+    "linkedin": "https://www.linkedin.com/in/eugenepark23/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Hanson Lu",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Hanson is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/hanson.png",
+    "linkedin": "https://www.linkedin.com/in/hansonlu/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Khiem Nguyen",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Khiem is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/khiem.png",
+    "linkedin": "https://www.linkedin.com/in/khiemnguyenn/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Leyna Nguyen",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Leyna is a sophomore who is actively exploring her interests and passions.",
+    "image": "/members/leyna.png",
+    "linkedin": "https://www.linkedin.com/in/leynanguyen2/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Maddie Feng",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Maddie is a sophomore who is actively exploring her interests and passions.",
+    "image": "/members/maddie.png",
+    "linkedin": "https://www.linkedin.com/in/madisonfeng/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Nolan Chen",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Nolan is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/nolan.png",
+    "linkedin": "https://www.linkedin.com/in/nolan-chen/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Sarang Ashwin",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Sarang is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/sarang.png",
+    "linkedin": "https://www.linkedin.com/in/sarang-ashwin/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Walker Blackwell",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2023",
+    "major": "Undeclared",
+    "description": "Walker is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/walker.png",
+    "linkedin": "https://www.linkedin.com/in/walker-blackwell/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Lorena Liu",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Lorena is a sophomore who is actively exploring her interests and passions.",
+    "image": "/members/lorena.png",
+    "linkedin": "https://www.linkedin.com/in/lorenaliu04/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Philix Lin",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2022",
+    "major": "Undeclared",
+    "description": "Philix is a senior who is actively exploring his interests and passions.",
+    "image": "/members/philix.png",
+    "linkedin": "https://www.linkedin.com/in/philix-lin/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Oliver Angsono",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Oliver is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/oliver.png",
+    "linkedin": "https://www.linkedin.com/in/oliverangsono/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Lilian Nguyen",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Lilian is a sophomore who is actively exploring her interests and passions.",
+    "image": "/members/lilian.png",
+    "linkedin": "https://www.linkedin.com/in/lilian-t-nguyen/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Kevin Lyu",
+    "role": "Active Member",
+    "pledgeClass": "Spring 2024",
+    "major": "Undeclared",
+    "description": "Kevin is a sophomore who is actively exploring his interests and passions.",
+    "image": "/members/kevin.png",
+    "linkedin": "https://www.linkedin.com/in/kevin-lyu/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Chris Sims",
+    "role": "Active Member",
+    "pledgeClass": "Fall 2022",
+    "major": "Undeclared",
+    "description": "Chris is a senior who is actively exploring his interests and passions.",
+    "image": "/members/chrissims.png",
+    "linkedin": "https://www.linkedin.com/in/christopherleesims/",
+    "designation": "Active Member"
+  }
+]
