@@ -1,4 +1,3 @@
-// components/landing/HeroBanner.js
 import Link from 'next/link';
 
 const HeroBanner = () => {
@@ -16,7 +15,7 @@ const HeroBanner = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex h-12 items-center justify-center rounded-md bg-[#EEC3E8] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-colors hover:bg-[#EEC3E8]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-[#EEC3E8] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 Apply Now

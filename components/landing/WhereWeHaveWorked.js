@@ -1,4 +1,3 @@
-// components/landing/WhereWeHaveWorked.js
 import React from 'react';
 
 const WhereWeHaveWorked = () => {
@@ -22,7 +21,7 @@ const WhereWeHaveWorked = () => {
             showcasing the strength of our professional network and the caliber of our members.
           </p>
           <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-5">
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/apple.png"
                 width="140"
@@ -31,7 +30,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/bain.png"
                 width="140"
@@ -40,7 +39,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/evercore.png"
                 width="140"
@@ -49,7 +48,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/jpm.png"
                 width="140"
@@ -58,7 +57,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/mckinsey.png"
                 width="140"
@@ -69,7 +68,7 @@ const WhereWeHaveWorked = () => {
             </div>
           </div>
           <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-5">
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/citibank.png"
                 width="140"
@@ -78,7 +77,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/lazard.png"
                 width="140"
@@ -87,7 +86,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/bofa.png"
                 width="140"
@@ -96,7 +95,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/google.png"
                 width="140"
@@ -105,7 +104,7 @@ const WhereWeHaveWorked = () => {
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               />
             </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8 transition-transform transform hover:scale-105">
               <img
                 src="/landing/companies/bcg.png"
                 width="140"

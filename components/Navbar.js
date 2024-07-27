@@ -20,14 +20,24 @@ const Navbar = () => {
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center bg-[#EFF7FF] font-manrope">
       <Link href="/" className="flex items-center justify-center gap-2" prefetch={false}>
-        <SortAZ className="w-6 h-6 text-[#3D2930]" />
-        <span className="font-bold text-[#3D2930]">Alpha Zeta</span>
+        <motion.div
+          whileHover={{ scale: 1.1, color: '#EEC3E8' }}
+          className="flex items-center justify-center gap-2 text-[#3D2930]"
+        >
+          <SortAZ className="w-6 h-6" />
+          <span className="font-bold">Alpha Zeta</span>
+        </motion.div>
       </Link>
       <div className="ml-auto flex items-center">
         <nav className="hidden md:flex gap-4 sm:gap-6">
           {navItems.map((item) => (
-            <Link href={item.href} key={item.title} className="relative group text-sm font-medium text-[#3D2930]" prefetch={false}>
-              <span className="group-hover:text-[#EEC3E8] group-hover:underline transition duration-300 ease-in-out">{item.title}</span>
+            <Link href={item.href} key={item.title} className="relative group text-sm font-medium" prefetch={false}>
+              <motion.span
+                whileHover={{ scale: 1.1, color: '#EEC3E8' }}
+                className="transition duration-300 ease-in-out text-[#3D2930]"
+              >
+                {item.title}
+              </motion.span>
             </Link>
           ))}
         </nav>
@@ -45,7 +55,7 @@ const Navbar = () => {
               className="fixed top-16 left-0 right-0 bg-[#EFF7FF] flex flex-col items-center md:hidden overflow-hidden"
             >
               {navItems.map((item) => (
-                <Link href={item.href} key={item.title} className="w-full text-center py-2 text-sm font-medium text-[#3D2930] flex items-center justify-center px-4" prefetch={false}>
+                <Link href={item.href} key={item.title} className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4" prefetch={false}>
                   <span>{item.title}</span>
                   <FiChevronRight className="w-4 h-4 text-[#EEC3E8] ml-2" />
                 </Link>

@@ -1,7 +1,7 @@
-// components/members/MemberGrid.js
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaLinkedin } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 
 const MemberGrid = () => {
   const [members, setMembers] = useState([]);
@@ -12,7 +12,7 @@ const MemberGrid = () => {
   const [pledgeClassFilter, setPledgeClassFilter] = useState('');
   const [majorFilter, setMajorFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const membersPerPage = 12;
+  const membersPerPage = 16;
 
   useEffect(() => {
     const fetchMembers = async () => {
@@ -66,10 +66,16 @@ const MemberGrid = () => {
   const indexOfFirstMember = indexOfLastMember - membersPerPage;
   const currentMembers = filteredMembers.slice(indexOfFirstMember, indexOfLastMember);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    scroll.scrollToTop({
+      duration: 500,
+      smooth: true
+    });
+  };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
+    <section id="member-grid" className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-wrap justify-between items-center mb-6">
           <div className="flex flex-wrap gap-4 items-center">
@@ -77,8 +83,9 @@ const MemberGrid = () => {
               <label htmlFor="designation" className="text-sm text-[#3D2930]">Filter by Designation:</label>
               <select
                 id="designation"
-                className="max-w-[200px] p-2 border rounded"
+                className="max-w-[200px] p-2 border rounded text-[#3D2930]"
                 onChange={(e) => setDesignationFilter(e.target.value)}
+                value={designationFilter}
               >
                 <option value="">All</option>
                 <option value="Executive Board">Executive Board</option>
@@ -90,8 +97,9 @@ const MemberGrid = () => {
               <label htmlFor="pledgeClass" className="text-sm text-[#3D2930]">Filter by Pledge Class:</label>
               <select
                 id="pledgeClass"
-                className="max-w-[200px] p-2 border rounded"
+                className="max-w-[200px] p-2 border rounded text-[#3D2930]"
                 onChange={(e) => setPledgeClassFilter(e.target.value)}
+                value={pledgeClassFilter}
               >
                 <option value="">All</option>
                 {uniquePledgeClasses.map((pledgeClass, index) => (
@@ -103,8 +111,9 @@ const MemberGrid = () => {
               <label htmlFor="major" className="text-sm text-[#3D2930]">Filter by Major:</label>
               <select
                 id="major"
-                className="max-w-[200px] p-2 border rounded"
+                className="max-w-[200px] p-2 border rounded text-[#3D2930]"
                 onChange={(e) => setMajorFilter(e.target.value)}
+                value={majorFilter}
               >
                 <option value="">All</option>
                 {uniqueMajors.map((major, index) => (
@@ -119,8 +128,9 @@ const MemberGrid = () => {
               id="search"
               type="text"
               placeholder="Search members..."
-              className="max-w-[200px] p-2 border rounded"
+              className="max-w-[200px] p-2 border rounded text-[#3D2930]"
               onChange={(e) => setSearchTerm(e.target.value)}
+              value={searchTerm}
             />
           </div>
         </div>
@@ -128,12 +138,12 @@ const MemberGrid = () => {
           {currentMembers.length > 0 ? (
             currentMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img src={member.image} alt={member.name} className="w-full h-96 object-cover object-center" />
+                <img src={member.image} alt={member.name} className="w-full h-60 object-cover object-center" />
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-[#3D2930] mb-2">{member.name}</h3>
                   <p className="text-sm text-[#3D2930] mb-2">{member.role}</p>
                   <p className="text-sm text-[#3D2930] mb-4">{member.description}</p>
-                  <a href={member.linkedin} target="_blank" className="inline-flex items-center gap-2 text-[#EEC3E8] hover:text-[#3D2930]">
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#EEC3E8] hover:text-[#3D2930]">
                     <FaLinkedin className="w-5 h-5" />
                     <span>View Profile</span>
                   </a>

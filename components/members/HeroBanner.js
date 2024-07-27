@@ -2,6 +2,10 @@
 import Link from 'next/link';
 
 const HeroBanner = () => {
+  const handleScroll = () => {
+    document.getElementById('member-grid').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-[#EEF7FF]">
       <div className="container mx-auto px-4 md:px-6">
@@ -14,13 +18,12 @@ const HeroBanner = () => {
               impact. From entrepreneurs to artists, our members bring a wealth of experience and expertise to the
               organization.
             </p>
-            <Link
-              href="#"
+            <button
+              onClick={handleScroll}
               className="inline-flex h-10 items-center justify-center rounded-md bg-[#EEC3E8] px-8 text-sm font-medium text-[#3D2930] shadow transition-colors hover:bg-[#EEC3E8]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
-              prefetch={false}
             >
               View Profiles
-            </Link>
+            </button>
           </div>
           <img
             src="/placeholder.svg"
