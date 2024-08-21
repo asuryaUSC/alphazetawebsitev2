@@ -7,7 +7,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#EEF7FF]">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#EEF7FF] pt-[80px] md:pt-[110px] lg:pt-[240px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-4 lg:space-y-6">

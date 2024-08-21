@@ -1,25 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 
 const MissionAndValues = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } },
+  };
+
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]" ref={ref}>
       <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6">
-        <div className="space-y-4 text-center">
+        <motion.div initial="hidden" animate={controls} variants={fadeInUp} className="space-y-4 text-center">
           <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">Mission & Values</div>
-          <h2 className="text-3xl font-bold tracking-tighter text-[#3D2930] sm:text-4xl md:text-5xl">Mission and Values</h2>
+          <h2 className="text-3xl font-bold tracking-tighter text-[#3D2930] sm:text-4xl md:text-5xl">
+            Mission and Values
+          </h2>
           <p className="mx-auto max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
             Alpha Zeta is dedicated to fostering professional growth, leadership, and community among its members.
           </p>
-        </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          <Card title="Brotherhood" description="Fostering lifelong connections and support among members." Icon={UsersIcon} />
-          <Card title="Integrity" description="Upholding the highest ethical standards in all endeavors." Icon={CheckIcon} />
-          <Card title="Knowledge" description="Cultivating intellectual growth and professional development." Icon={BookIcon} />
-          <Card title="Unity" description="Promoting collaboration and a shared sense of purpose." Icon={HandshakeIcon} />
-          <Card title="Service" description="Dedicating time and resources to positively impact the community." Icon={HeartIcon} />
-        </div>
-        <div className="flex justify-center">
+        </motion.div>
+        <motion.div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" initial="hidden" animate={controls} variants={fadeInUp}>
+          <Card title="Brotherhood" description="Fostering lifelong connections and support among members." Icon={UsersIcon} delay={0.2} />
+          <Card title="Integrity" description="Upholding the highest ethical standards in all endeavors." Icon={CheckIcon} delay={0.4} />
+          <Card title="Knowledge" description="Cultivating intellectual growth and professional development." Icon={BookIcon} delay={0.6} />
+          <Card title="Unity" description="Promoting collaboration and a shared sense of purpose." Icon={HandshakeIcon} delay={0.8} />
+          <Card title="Service" description="Dedicating time and resources to positively impact the community." Icon={HeartIcon} delay={1.0} />
+        </motion.div>
+        <motion.div initial="hidden" animate={controls} variants={fadeInUp} className="flex justify-center">
           <Link
             href="/members"
             className="inline-flex h-10 items-center justify-center rounded-md bg-[#89CFF0] px-8 text-sm font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#89CFF0]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
@@ -27,23 +46,43 @@ const MissionAndValues = () => {
           >
             Active Members
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-const Card = ({ title, description, Icon }) => {
+const Card = ({ title, description, Icon, delay }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <div className="flex flex-col items-center gap-4 p-6 bg-[#E5F2FF] rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg duration-300 ease-in-out">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } },
+      }}
+      className="flex flex-col items-center gap-4 p-6 bg-[#E5F2FF] rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg duration-300 ease-in-out"
+    >
       <div className="bg-[#89CFF0] rounded-md p-3 flex items-center justify-center">
         <Icon className="w-6 h-6 text-[#3D2930]" />
       </div>
       <h3 className="text-xl font-semibold text-[#3D2930]">{title}</h3>
       <p className="text-[#3D2930] text-center">{description}</p>
-    </div>
+    </motion.div>
   );
 };
+
+// SVG Icons
 
 function BookIcon(props) {
   return (

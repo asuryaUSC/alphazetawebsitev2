@@ -1,37 +1,80 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { SortAZ } from 'tabler-icons-react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { FiMenu, FiX, FiChevronRight } from 'react-icons/fi';
 import navItems from './NavItems';
-import { scroller } from 'react-scroll'; // Import scroller from react-scroll
+import { scroller } from 'react-scroll';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const [isTop, setIsTop] = useState(true);
+  const controls = useAnimation();
+  const router = useRouter();
 
   useEffect(() => {
-    setIsClient(true);  // This will set isClient to true once the component mounts
-  }, []);
+    setIsClient(true);
+
+    controls.start({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeInOut' },
+    });
+
+    const handleScroll = () => {
+      setIsTop(window.scrollY < 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Scroll to section handler using react-scroll's scroller
   const handleScrollToSection = (sectionId) => {
+    const offset = window.innerWidth < 768 ? -50 : 0; // Adjust for mobile (negative offset)
     scroller.scrollTo(sectionId, {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart', // Smooth scrolling effect
+      smooth: 'easeInOutQuart',
+      offset: offset, // Add the offset to account for the navbar
     });
+    setIsOpen(false); // Close the menu after scrolling
+  };
+
+  const handleNavigation = (item) => {
+    if (item.href === '/about-us') {
+      if (router.pathname === '/') {
+        handleScrollToSection('about-us');
+      } else {
+        router.push('/').then(() => {
+          handleScrollToSection('about-us');
+        });
+      }
+    } else {
+      setIsOpen(false);
+      router.push(item.href);
+    }
   };
 
   return (
-    <header className="px-4 lg:px-6 h-16 flex items-center bg-[#EFF7FF] font-manrope">
+    <motion.header
+      className={`px-4 lg:px-6 h-16 fixed top-0 left-0 right-0 z-50 flex items-center font-manrope transition-shadow duration-300 ease-in-out ${
+        isTop ? 'shadow-none' : 'shadow-md'
+      } bg-[#EFF7FF]`}
+      initial={{ opacity: 0, y: -50 }}
+      animate={controls}
+    >
       <Link href="/" className="flex items-center justify-center gap-2" prefetch={false}>
         <motion.div
-          whileHover={{ scale: 1.1, color: '#EEC3E8' }}
+          whileHover={{ scale: 1.1, color: '#89CFF0' }}
           className="flex items-center justify-center gap-2 text-[#3D2930]"
         >
           <SortAZ className="w-6 h-6" />
@@ -43,8 +86,8 @@ const Navbar = () => {
           {navItems.map((item) => (
             <motion.span
               key={item.title}
-              onClick={() => handleScrollToSection(item.href === '/about-us' ? 'about-us' : '')} // Handle smooth scroll for About Us
-              whileHover={{ scale: 1.1, color: '#EEC3E8' }}
+              onClick={() => handleNavigation(item)}
+              whileHover={{ scale: 1.1, color: '#89CFF0' }}
               className="cursor-pointer text-sm font-medium transition duration-300 ease-in-out text-[#3D2930]"
             >
               {item.title}
@@ -63,7 +106,7 @@ const Navbar = () => {
         </Link>
         {/* Mobile Menu Button */}
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
-          {isOpen ? <FiX className="w-6 h-6 text-[#EEC3E8]" /> : <FiMenu className="w-6 h-6 text-[#EEC3E8]" />}
+          {isOpen ? <FiX className="w-6 h-6 text-[#89CFF0]" /> : <FiMenu className="w-6 h-6 text-[#89CFF0]" />}
         </button>
       </div>
       {isClient && (
@@ -76,23 +119,21 @@ const Navbar = () => {
               className="fixed top-16 left-0 right-0 bg-[#EFF7FF] flex flex-col items-center md:hidden overflow-hidden"
             >
               {navItems.map((item) => (
-                <Link
-                  href={item.href}
+                <span
                   key={item.title}
-                  className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4"
-                  onClick={() => handleScrollToSection(item.href === '/about-us' ? 'about-us' : '')}
-                  prefetch={false}
+                  className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4 cursor-pointer"
+                  onClick={() => handleNavigation(item)}
                 >
-                  <span>{item.title}</span>
-                  <FiChevronRight className="w-4 h-4 text-[#EEC3E8] ml-2" />
-                </Link>
+                  {item.title}
+                  <FiChevronRight className="w-4 h-4 text-[#89CFF0] ml-2" />
+                </span>
               ))}
               <div className="py-4" />
             </motion.nav>
           )}
         </AnimatePresence>
       )}
-    </header>
+    </motion.header>
   );
 };
 

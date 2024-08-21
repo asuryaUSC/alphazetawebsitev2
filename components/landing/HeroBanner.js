@@ -41,7 +41,8 @@ const HeroBanner = () => {
 
   return (
     <main className="flex-1 bg-[#EFF7FF]">
-      <section className="w-full py-8 md:py-12 lg:py-16 xl:py-24">
+      <section className="w-full py-8 md:py-12 lg:py-16 xl:py-24 pt-[80px] md:pt-[110px] lg:pt-[240px]">
+        {/* Adjusted top padding for all screen sizes */}
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 lg:gap-12">
             <motion.div
@@ -64,16 +65,15 @@ const HeroBanner = () => {
                 USC's Premiere Co-Ed Business Society
               </motion.p>
               <motion.div variants={buttonVariants}>
-              <Link
-                href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
-                className="inline-flex h-12 items-center justify-center rounded-md bg-[#57A0D3] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apply Now
-              </Link>
-
+                <Link
+                  href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
+                  className="inline-flex h-12 items-center justify-center rounded-md bg-[#57A0D3] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply Now
+                </Link>
               </motion.div>
             </motion.div>
             <motion.img

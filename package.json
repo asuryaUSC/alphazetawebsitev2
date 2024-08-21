@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/accordion": "^2.0.38",
     "@tabler/core": "^1.0.0-beta20",
     "framer-motion": "^11.3.8",
     "next": "14.2.5",
