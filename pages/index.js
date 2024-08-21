@@ -12,9 +12,9 @@ const Home = () => {
       <Navbar />
       <HeroBanner />
       <AboutUs />
+      <WhereWeHaveWorked />
       <MissionAndValues />
       <Brotherhood />
-      <WhereWeHaveWorked />
       <Footer />
     </div>
   );

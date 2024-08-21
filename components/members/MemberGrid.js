@@ -143,7 +143,7 @@ const MemberGrid = () => {
                   <h3 className="text-xl font-bold text-[#3D2930] mb-2">{member.name}</h3>
                   <p className="text-sm text-[#3D2930] mb-2">{member.role}</p>
                   <p className="text-sm text-[#3D2930] mb-4">{member.description}</p>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#EEC3E8] hover:text-[#3D2930]">
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#89CFF0] hover:text-[#3D2930]">
                     <FaLinkedin className="w-5 h-5" />
                     <span>View Profile</span>
                   </a>
@@ -180,7 +180,7 @@ const Pagination = ({ currentPage, totalPages, paginate }) => {
           <li key={number} className="cursor-pointer">
             <a
               onClick={() => paginate(number)}
-              className={`px-3 py-1 rounded-md ${number === currentPage ? 'bg-[#EEC3E8] text-[#3D2930]' : 'bg-[#3D2930] text-white'}`}
+              className={`px-3 py-1 rounded-md ${number === currentPage ? 'bg-[#89CFF0] text-[#3D2930]' : 'bg-[#73C2FB] text-[#3D2930]'}`}
             >
               {number}
             </a>

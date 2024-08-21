@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const MissionAndValues = () => {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
       <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6">
         <div className="space-y-4 text-center">
-          <div className="inline-block rounded-lg bg-[#E5F2FF] px-3 py-1 text-sm text-[#3D2930]">Mission & Values</div>
+          <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">Mission & Values</div>
           <h2 className="text-3xl font-bold tracking-tighter text-[#3D2930] sm:text-4xl md:text-5xl">Mission and Values</h2>
           <p className="mx-auto max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
             Alpha Zeta is dedicated to fostering professional growth, leadership, and community among its members.
@@ -22,7 +22,7 @@ const MissionAndValues = () => {
         <div className="flex justify-center">
           <Link
             href="/members"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-[#EEC3E8] px-8 text-sm font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#EEC3E8]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-[#89CFF0] px-8 text-sm font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#89CFF0]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             Active Members
@@ -36,7 +36,7 @@ const MissionAndValues = () => {
 const Card = ({ title, description, Icon }) => {
   return (
     <div className="flex flex-col items-center gap-4 p-6 bg-[#E5F2FF] rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg duration-300 ease-in-out">
-      <div className="bg-[#EEC3E8] rounded-md p-3 flex items-center justify-center">
+      <div className="bg-[#89CFF0] rounded-md p-3 flex items-center justify-center">
         <Icon className="w-6 h-6 text-[#3D2930]" />
       </div>
       <h3 className="text-xl font-semibold text-[#3D2930]">{title}</h3>

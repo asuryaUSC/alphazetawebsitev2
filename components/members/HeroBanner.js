@@ -20,7 +20,7 @@ const HeroBanner = () => {
             </p>
             <button
               onClick={handleScroll}
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[#EEC3E8] px-8 text-sm font-medium text-[#3D2930] shadow transition-colors hover:bg-[#EEC3E8]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-[#89CFF0] px-8 text-sm font-medium text-[#3D2930] shadow transition-colors hover:bg-[#EEC3E8]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
             >
               View Profiles
             </button>
