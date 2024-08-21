@@ -4,6 +4,7 @@ import { SortAZ } from 'tabler-icons-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FiMenu, FiX, FiChevronRight } from 'react-icons/fi';
 import navItems from './NavItems';
+import { scroller } from 'react-scroll'; // Import scroller from react-scroll
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,15 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Scroll to section handler using react-scroll's scroller
+  const handleScrollToSection = (sectionId) => {
+    scroller.scrollTo(sectionId, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart', // Smooth scrolling effect
+    });
   };
 
   return (
@@ -31,14 +41,14 @@ const Navbar = () => {
       <div className="ml-auto flex items-center">
         <nav className="hidden md:flex gap-4 sm:gap-6">
           {navItems.map((item) => (
-            <Link href={item.href} key={item.title} className="relative group text-sm font-medium" prefetch={false}>
-              <motion.span
-                whileHover={{ scale: 1.1, color: '#EEC3E8' }}
-                className="transition duration-300 ease-in-out text-[#3D2930]"
-              >
-                {item.title}
-              </motion.span>
-            </Link>
+            <motion.span
+              whileHover={{ scale: 1.1, color: '#EEC3E8' }}
+              key={item.title}
+              onClick={() => handleScrollToSection(item.href === '/about-us' ? 'about-us' : '')} // Handle smooth scroll for About Us
+              className="cursor-pointer text-sm font-medium transition duration-300 ease-in-out text-[#3D2930]"
+            >
+              {item.title}
+            </motion.span>
           ))}
         </nav>
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
@@ -55,7 +65,13 @@ const Navbar = () => {
               className="fixed top-16 left-0 right-0 bg-[#EFF7FF] flex flex-col items-center md:hidden overflow-hidden"
             >
               {navItems.map((item) => (
-                <Link href={item.href} key={item.title} className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4" prefetch={false}>
+                <Link
+                  href={item.href}
+                  key={item.title}
+                  className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4"
+                  onClick={() => handleScrollToSection(item.href === '/about-us' ? 'about-us' : '')}
+                  prefetch={false}
+                >
                   <span>{item.title}</span>
                   <FiChevronRight className="w-4 h-4 text-[#EEC3E8] ml-2" />
                 </Link>
