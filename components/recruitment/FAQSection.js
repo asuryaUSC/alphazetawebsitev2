@@ -62,18 +62,18 @@ const FAQSection = () => {
               key={index}
               aria-label={`Accordion ${index + 1}`}
               title={faq.question}
-              className="text-[#3D2930] text-left"
+              className="text-[#3D2930] text-center"
               css={{
                 '.nextui-accordion-content': {
-                  textAlign: 'left', // Ensures the answer is left aligned
+                  textAlign: 'center', // Ensures the answer is left aligned
                   padding: '10px 0', // Adds padding between items
                 },
                 '.nextui-accordion-title': {
-                  textAlign: 'left', // Ensures the question is left aligned
+                  textAlign: 'center', // Ensures the question is left aligned
                 },
               }}
             >
-              <div className="text-left text-[#3D2930]">
+              <div className="text-center text-[#3D2930]">
                 {faq.answer}
               </div>
             </AccordionItem>
