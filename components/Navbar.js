@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { SortAZ } from 'tabler-icons-react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { FiMenu, FiX, FiChevronRight } from 'react-icons/fi';
 import navItems from './NavItems';
@@ -74,11 +73,17 @@ const Navbar = () => {
     >
       <Link href="/" className="flex items-center justify-center gap-2" prefetch={false}>
         <motion.div
-          whileHover={{ scale: 1.1, color: '#89CFF0' }}
+          whileHover={{ scale: 1.1 }}
           className="flex items-center justify-center gap-2 text-[#3D2930]"
         >
-          <SortAZ className="w-6 h-6" />
-          <span className="font-bold">Alpha Zeta</span>
+          {/* Replace icon with logo */}
+          <img 
+            src="/navlogo.png" 
+            alt="Alpha Zeta Logo" 
+            className="h-10 w-auto" // Ensure the logo does not stretch, keep height at 40px and adjust width proportionally
+          />
+          {/* Alpha Zeta Text */}
+          <span className="font-bold text-lg">Alpha Zeta</span>
         </motion.div>
       </Link>
       <div className="ml-auto flex items-center">
