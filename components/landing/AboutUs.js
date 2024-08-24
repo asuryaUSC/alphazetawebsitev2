@@ -14,7 +14,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section id="about-us" className="bg-[#E5F2FF] py-12 md:py-24 lg:py-32">
+    <section id="about-us" className="bg-[#E5F2FF] py-12 md:py-24 lg:py-36">
       <motion.div
         ref={ref}
         initial="hidden"
