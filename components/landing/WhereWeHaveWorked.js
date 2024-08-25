@@ -87,6 +87,11 @@ Alpha Zeta members and alumni have secured top opportunities in industries like 
               '/landing/companies/bofa.png',
               '/landing/companies/google.png',
               '/landing/companies/bcg.png',
+              '/landing/companies/ey.png',
+              '/landing/companies/deloitte.png',
+              '/landing/companies/amazon.png',
+              '/landing/companies/spacex.png',
+              '/landing/companies/bloomberg.png',
             ].map((src, idx) => (
               <motion.div
                 key={idx}
