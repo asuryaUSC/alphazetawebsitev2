@@ -62,7 +62,8 @@ const WhereWeHaveWorked = () => {
             variants={fadeInUp}
             className="mx-auto max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl"
           >
-            Alpha Zeta members have interned and worked at some of the most prestigious companies in the world.
+           
+Alpha Zeta members and alumni have secured top opportunities in industries like investment banking, consulting, SWE, PM, and entrepreneurship. Our network spans elite finance firms and cutting-edge tech companies, offering career paths that reflect our commitment to excellence. Join us and connect with a community that builds leaders and fosters lifelong success.
           </motion.p>
         </motion.div>
 

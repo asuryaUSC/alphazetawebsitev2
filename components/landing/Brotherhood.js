@@ -43,8 +43,7 @@ const Brotherhood = () => {
             A Lifelong Community of Leaders
           </motion.h2>
           <motion.p variants={fadeInUp} className="max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
-            At the heart of Alpha Zeta is a strong sense of brotherhood that extends beyond the college years. Our
-            members form lifelong connections and support each other in their personal and professional endeavors.
+          At Alpha Zeta, brotherhood goes beyond college years—it’s a lifelong bond. Our members build enduring relationships that support both personal and professional growth. With a strong network of alumni who are leaders in their fields, Alpha Zeta provides a foundation for meaningful connections that last a lifetime, empowering our brothers to thrive in every stage of their careers.
           </motion.p>
           <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-4">
             <motion.div variants={fadeInUp} className="flex flex-col items-start gap-2">

@@ -33,9 +33,10 @@ const AboutUs = () => {
             Empowering Leaders Through Brotherhood
           </motion.h2>
           <motion.p variants={variants} className="max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
-            Alpha Zeta is a professional fraternity that has been fostering the development of future leaders since 1920. 
-            Our core values of Brotherhood, Integrity, Knowledge, Unity, and Service (BIKUS) guide us in our mission to create 
-            a lifelong community of professionals dedicated to making a positive impact.
+          Since our founding in 1920, Alpha Zeta has been a beacon for aspiring leaders, cultivating a community where ambition meets purpose. We are more than just a fraternity; we are a family bound by the principles of Brotherhood, Integrity, Knowledge, Unity, and Service (BIKUS). These values are the cornerstone of everything we do, from fostering lifelong friendships to empowering our members to excel in their professional journeys.
+          </motion.p>
+          <motion.p variants={variants} className="max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
+          At Alpha Zeta, we believe in the power of collective growth. Our members are driven by a shared commitment to make a positive impact in the world, both during their time with us and beyond. Whether through networking, mentorship, or community service, we offer a platform for driven individuals to develop their potential and contribute meaningfully to society.
           </motion.p>
         </div>
         <motion.img

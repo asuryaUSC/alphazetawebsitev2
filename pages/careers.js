@@ -8,6 +8,7 @@ import AZCS from '../components/careers/AZCS';
 import AZEntre from '../components/careers/AZEntre';
 import AZMarketing from '../components/careers/AZMarketing';
 import AZPM from '../components/careers/AZPM';
+import Head from 'next/head';
 
 
 
@@ -16,6 +17,10 @@ const Recruitment = () => {
     <div className="flex flex-col min-h-screen bg-[#EEF7FF]">
       <Navbar />
       <HeroBanner />
+      <Head>
+        <title>Alpha Zeta - Careers</title>
+        <meta name="description" content="Alpha Zeta's official website. Empowering leaders through brotherhood, integrity, and service." />
+      </Head>
       <main className="flex-grow">
         <AZ13 />
         <AZC />
