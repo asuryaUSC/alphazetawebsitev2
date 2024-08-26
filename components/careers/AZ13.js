@@ -120,7 +120,7 @@ const AZ13 = () => {
             ].map((teamMember, index) => (
               <motion.div
                 key={index}
-                className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center"
+                className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
                 custom={index}
                 initial="hidden"
                 animate={controls}
@@ -129,9 +129,9 @@ const AZ13 = () => {
                 <img
                   src={teamMember.image}
                   alt={teamMember.name}
-                  className="w-16 h-16 rounded-full"
+                  className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
                 />
-                <div className="px-4">
+                <div className="px-4 max-w-full sm:max-w-[70%]">
                   <h3 className="text-lg font-semibold text-[#3D2930]">{teamMember.name}</h3>
                   <p className="text-[#3D2930] font-semibold">{teamMember.role}</p>
                   <p className="text-[#3D2930]">{teamMember.description}</p>

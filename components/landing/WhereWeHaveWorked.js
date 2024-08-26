@@ -62,8 +62,7 @@ const WhereWeHaveWorked = () => {
             variants={fadeInUp}
             className="mx-auto max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl"
           >
-           
-Alpha Zeta members and alumni have secured top opportunities in industries like investment banking, consulting, SWE, PM, and entrepreneurship. Our network spans elite finance firms and cutting-edge tech companies, offering career paths that reflect our commitment to excellence. Join us and connect with a community that builds leaders and fosters lifelong success.
+           Alpha Zeta members and alumni have secured prestigious opportunities across diverse industries, from investment banking, consulting, technology, to entrepreneurship. Our wide-reaching alumni network reflects our longstanding commitment to cultivate excellence and lifelong success.
           </motion.p>
         </motion.div>
 
@@ -79,8 +78,8 @@ Alpha Zeta members and alumni have secured top opportunities in industries like 
             {[
               '/landing/companies/apple.png',
               '/landing/companies/bain.png',
-              '/landing/companies/evercore.png',
               '/landing/companies/jpm.png',
+              '/landing/companies/evercore.png',
               '/landing/companies/mckinsey.png',
               '/landing/companies/citibank.png',
               '/landing/companies/lazard.png',
@@ -91,6 +90,7 @@ Alpha Zeta members and alumni have secured top opportunities in industries like 
               '/landing/companies/deloitte.png',
               '/landing/companies/amazon.png',
               '/landing/companies/spacex.png',
+              '/landing/companies/kpmg.png',
               '/landing/companies/bloomberg.png',
             ].map((src, idx) => (
               <motion.div

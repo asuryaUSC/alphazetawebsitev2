@@ -1,15 +1,62 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const WhyRushAZ = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Only activate animation when 20% of the section is visible
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each child animation
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } },
+  };
+
   return (
-    <section className="bg-[#E5F2FF] py-12 md:py-20 px-4 md:px-6">
-      <div className="container mx-auto text-center mb-8">
-        <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">Why Rush AZ?</div>
-        <h2 className="text-3xl md:text-4xl pt-2 font-bold mb-2 text-[#3D2930]">Why Rush Alpha Zeta?</h2>
-        <p className="text-[#3D2930]">Discover the benefits of joining our premier co-ed business society.</p>
-      </div>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="flex flex-col items-center gap-4 text-center">
+    <section ref={ref} className="bg-[#E5F2FF] py-12 md:py-20 px-4 md:px-6">
+      <motion.div
+        className="container mx-auto text-center mb-8"
+        initial="hidden"
+        animate={controls}
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants} className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">
+          Why Rush AZ?
+        </motion.div>
+        <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl pt-2 font-bold mb-2 text-[#3D2930]">
+          Why Rush Alpha Zeta?
+        </motion.h2>
+        <motion.p variants={itemVariants} className="text-[#3D2930]">
+          Discover the benefits of joining our premier co-ed business society.
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8"
+        initial="hidden"
+        animate={controls}
+        variants={containerVariants}
+      >
+        {/* Card 1 */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
           <div className="bg-[#89CFF0] rounded-full p-4">
             <BriefcaseIcon className="w-8 h-8 text-[#3D2930]" />
           </div>
@@ -17,8 +64,10 @@ const WhyRushAZ = () => {
           <p className="text-[#3D2930]">
             Gain valuable skills and experience through our professional development workshops and events.
           </p>
-        </div>
-        <div className="flex flex-col items-center gap-4 text-center">
+        </motion.div>
+
+        {/* Card 2 */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
           <div className="bg-[#89CFF0] rounded-full p-4">
             <UsersIcon className="w-8 h-8 text-[#3D2930]" />
           </div>
@@ -26,8 +75,10 @@ const WhyRushAZ = () => {
           <p className="text-[#3D2930]">
             Build lasting connections with like-minded students and industry professionals.
           </p>
-        </div>
-        <div className="flex flex-col items-center gap-4 text-center">
+        </motion.div>
+
+        {/* Card 3 */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
           <div className="bg-[#89CFF0] rounded-full p-4">
             <BadgeIcon className="w-8 h-8 text-[#3D2930]" />
           </div>
@@ -35,8 +86,10 @@ const WhyRushAZ = () => {
           <p className="text-[#3D2930]">
             Receive guidance and support from experienced upperclassmen and alumni.
           </p>
-        </div>
-        <div className="flex flex-col items-center gap-4 text-center">
+        </motion.div>
+
+        {/* Card 4 */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
           <div className="bg-[#89CFF0] rounded-full p-4">
             <HandshakeIcon className="w-8 h-8 text-[#3D2930]" />
           </div>
@@ -44,8 +97,8 @@ const WhyRushAZ = () => {
           <p className="text-[#3D2930]">
             Access exclusive job and internship opportunities through our corporate partnerships.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

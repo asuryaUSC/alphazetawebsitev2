@@ -31,7 +31,7 @@ const AZCS = () => {
   };
 
   return (
-    <section id='az-cs' ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section id="az-cs" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -114,7 +114,7 @@ const AZCS = () => {
                 <img
                   src={teamMember.image}
                   alt={teamMember.name}
-                  className="w-16 h-16 rounded-full"
+                  className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
                 />
                 <div className="px-4">
                   <h3 className="text-lg font-semibold text-[#3D2930]">{teamMember.name}</h3>

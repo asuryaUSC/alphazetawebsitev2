@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { FaLinkedin } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const MemberGrid = () => {
   const [members, setMembers] = useState([]);
   const [filteredMembers, setFilteredMembers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filter, setFilter] = useState('');
   const [designationFilter, setDesignationFilter] = useState('');
   const [pledgeClassFilter, setPledgeClassFilter] = useState('');
   const [majorFilter, setMajorFilter] = useState('');
+  const [minorFilter, setMinorFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const membersPerPage = 16;
 
   useEffect(() => {
     const fetchMembers = async () => {
-      const response = await fetch('/members.json'); // Ensure path is to public directory
+      const response = await fetch('/members.json');
       const data = await response.json();
       setMembers(data);
       setFilteredMembers(data);
@@ -31,7 +31,10 @@ const MemberGrid = () => {
       filtered = filtered.filter(member =>
         member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         member.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        member.major.toLowerCase().includes(searchTerm.toLowerCase())
+        member.major.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (member.second_major && member.second_major.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (member.minor && member.minor.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        member.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
@@ -44,10 +47,16 @@ const MemberGrid = () => {
     }
 
     if (majorFilter) {
-      filtered = filtered.filter(member => member.major === majorFilter);
+      filtered = filtered.filter(member =>
+        member.major === majorFilter || (member.second_major && member.second_major === majorFilter)
+      );
     }
 
-    if (!designationFilter && !pledgeClassFilter && !majorFilter && !searchTerm) {
+    if (minorFilter) {
+      filtered = filtered.filter(member => member.minor && member.minor.includes(minorFilter));
+    }
+
+    if (!designationFilter && !pledgeClassFilter && !majorFilter && !minorFilter && !searchTerm) {
       filtered = filtered.sort((a, b) => {
         if (a.designation === 'Executive Board' && b.designation !== 'Executive Board') return -1;
         if (a.designation !== 'Executive Board' && b.designation === 'Executive Board') return 1;
@@ -57,10 +66,11 @@ const MemberGrid = () => {
 
     setFilteredMembers(filtered);
     setCurrentPage(1);
-  }, [searchTerm, designationFilter, pledgeClassFilter, majorFilter, members]);
+  }, [searchTerm, designationFilter, pledgeClassFilter, majorFilter, minorFilter, members]);
 
   const uniquePledgeClasses = [...new Set(members.map(member => member.pledgeClass))];
-  const uniqueMajors = [...new Set(members.map(member => member.major))];
+  const uniqueMajors = [...new Set(members.flatMap(member => [member.major, member.second_major].filter(Boolean)))];
+  const uniqueMinors = [...new Set(members.flatMap(member => member.minor ? member.minor.split(', ') : []))];
 
   const indexOfLastMember = currentPage * membersPerPage;
   const indexOfFirstMember = indexOfLastMember - membersPerPage;
@@ -72,6 +82,17 @@ const MemberGrid = () => {
       duration: 500,
       smooth: true
     });
+  };
+
+  // Framer Motion Variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 0.2 } }
   };
 
   return (
@@ -89,7 +110,7 @@ const MemberGrid = () => {
               >
                 <option value="">All</option>
                 <option value="Executive Board">Executive Board</option>
-                <option value="AZ Group Head">AZ Group Head</option>
+                <option value="AZ Head">AZ Group Head</option>
                 <option value="Active Member">Active Member</option>
               </select>
             </div>
@@ -121,6 +142,20 @@ const MemberGrid = () => {
                 ))}
               </select>
             </div>
+            <div className="flex items-center gap-2">
+              <label htmlFor="minor" className="text-sm text-[#3D2930]">Filter by Minor:</label>
+              <select
+                id="minor"
+                className="max-w-[200px] p-2 border rounded text-[#3D2930]"
+                onChange={(e) => setMinorFilter(e.target.value)}
+                value={minorFilter}
+              >
+                <option value="">All</option>
+                {uniqueMinors.map((minor, index) => (
+                  <option key={index} value={minor}>{minor}</option>
+                ))}
+              </select>
+            </div>
           </div>
           <div className="flex items-center gap-2 mt-4 sm:mt-0">
             <label htmlFor="search" className="text-sm text-[#3D2930]">Search:</label>
@@ -134,26 +169,44 @@ const MemberGrid = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          animate="visible"
+        >
           {currentMembers.length > 0 ? (
             currentMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img src={member.image} alt={member.name} className="w-full h-60 object-cover object-center" />
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg overflow-hidden shadow-md relative"
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover object-center"
+                  style={{ aspectRatio: '4/3' }}
+                />
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-[#3D2930] mb-2">{member.name}</h3>
-                  <p className="text-sm text-[#3D2930] mb-2">{member.role}</p>
-                  <p className="text-sm text-[#3D2930] mb-4">{member.description}</p>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#89CFF0] hover:text-[#3D2930]">
-                    <FaLinkedin className="w-5 h-5" />
-                    <span>View Profile</span>
-                  </a>
+                  <motion.h3 className="text-xl font-bold text-[#3D2930] mb-2" variants={textVariants}>{member.name}</motion.h3>
+                  <motion.p className="text-sm text-[#3D2930] mb-2 font-semibold italic" variants={textVariants}>{member.role}</motion.p>
+                  <motion.p className="text-sm text-[#3D2930] mb-2 font-medium" variants={textVariants}>Major: {member.major}</motion.p>
+                  <motion.p className="text-sm text-[#3D2930] mb-4" variants={textVariants}>{member.description}</motion.p>
+                  <div className="flex justify-between items-center">
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#89CFF0] hover:text-[#3D2930]">
+                      <FaLinkedin className="w-5 h-5" />
+                      <span className="ml-2">View Profile</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             ))
           ) : (
             <p className="text-[#3D2930]">No members found.</p>
           )}
-        </div>
+        </motion.div>
         <div className="flex justify-center mt-8">
           <Pagination
             currentPage={currentPage}

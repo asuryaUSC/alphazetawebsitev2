@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaCheckCircle, FaLinkedin } from 'react-icons/fa';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -11,7 +11,7 @@ const AZAccounting = () => {
   });
 
   // Start animation when section comes into view
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
@@ -84,7 +84,7 @@ const AZAccounting = () => {
 
           {/* Right Section - Single Card for Elena */}
           <motion.div
-            className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
+            className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:max-h-[350px] flex-col sm:flex-row"
             custom={0}
             initial="hidden"
             animate={controls}
@@ -93,7 +93,7 @@ const AZAccounting = () => {
             <img
               src="/members/elena.png"
               alt="Elena Mao"
-              className="w-16 h-16 rounded-full mb-4 sm:mb-0 sm:mr-4"
+              className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
             />
             <div className="px-4 max-w-full sm:max-w-[70%]">
               <h3 className="text-lg font-semibold text-[#3D2930]">Elena Mao</h3>

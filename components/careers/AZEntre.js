@@ -32,7 +32,7 @@ const AZEntrepreneurship = () => {
   };
 
   return (
-    <section id='az-entrepreneurship' ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
+    <section id="az-entrepreneurship" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -85,7 +85,7 @@ const AZEntrepreneurship = () => {
           {/* Right Section - Team Card for Darren Tsang */}
           <div className="grid gap-6">
             <motion.div
-              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-auto sm:max-h-[350px] flex-col sm:flex-row"
               custom={0}
               initial="hidden"
               animate={controls}
@@ -94,9 +94,9 @@ const AZEntrepreneurship = () => {
               <img
                 src="/members/darren.png"
                 alt="Darren Tsang"
-                className="w-16 h-16 rounded-full mb-4 sm:mb-0 sm:mr-4"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
               />
-              <div className='px-4 max-w-full sm:max-w-[70%]'>
+              <div className="px-4 max-w-full sm:max-w-[70%]">
                 <h3 className="text-lg font-semibold text-[#3D2930]">Darren Tsang</h3>
                 <p className="text-[#3D2930] font-semibold">Head of Entrepreneurship, Alpha Zeta</p>
                 <p className="text-[#3D2930]">

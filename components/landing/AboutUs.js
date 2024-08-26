@@ -33,19 +33,19 @@ const AboutUs = () => {
             Empowering Leaders Through Brotherhood
           </motion.h2>
           <motion.p variants={variants} className="max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
-          Since our founding in 1920, Alpha Zeta has been a beacon for aspiring leaders, cultivating a community where ambition meets purpose. We are more than just a fraternity; we are a family bound by the principles of Brotherhood, Integrity, Knowledge, Unity, and Service (BIKUS). These values are the cornerstone of everything we do, from fostering lifelong friendships to empowering our members to excel in their professional journeys.
+          Alpha Zeta is USC’s premier co-ed business society. Since our founding in 1922, we’ve built a thriving community of students across 15+ different majors and established an extensive alumni network, paving the way for future leaders.
           </motion.p>
           <motion.p variants={variants} className="max-w-[700px] text-[#3D2930] md:text-xl lg:text-base xl:text-xl">
-          At Alpha Zeta, we believe in the power of collective growth. Our members are driven by a shared commitment to make a positive impact in the world, both during their time with us and beyond. Whether through networking, mentorship, or community service, we offer a platform for driven individuals to develop their potential and contribute meaningfully to society.
+          At Alpha Zeta, we believe in the power of collective growth. We strive to empower our brothers to excel in their careers, foster lifelong friendships, and advance in every aspect of their lives.
           </motion.p>
         </div>
         <motion.img
           variants={variants}
-          src="/placeholder.svg"
+          src="/landing/landing-aboutus.png"
           width="550"
           height="310"
           alt="Alpha Zeta"
-          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+          className="mx-auto overflow-hidden rounded-xl object-contain sm:w-full"
         />
       </motion.div>
     </section>

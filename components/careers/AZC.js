@@ -82,36 +82,68 @@ const AZC = () => {
             </div>
           </motion.div>
 
-          {/* Right Section - Single Card for Anson Chu */}
-          <motion.div
-            className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
-            custom={0}
-            initial="hidden"
-            animate={controls}
-            variants={cardVariants}
-          >
-            <img
-              src="/members/anson.png"
-              alt="Anson Chu"
-              className="w-16 h-16 rounded-full mb-4 sm:mb-0 sm:mr-4"
-            />
-            <div className="px-4 max-w-full sm:max-w-[70%]">
-              <h3 className="text-lg font-semibold text-[#3D2930]">Anson Chu</h3>
-              <p className="text-[#3D2930] font-semibold">Head of Consulting, Alpha Zeta</p>
-              <p className="text-[#3D2930]">
-                Anson is currently an incoming associate consultant intern at Bain & Company San Francisco. With experience working with early-stage startups, he hopes to utilize his ground-up business acumen to solve modern business problems.
-              </p>
-              <a
-                href="https://www.linkedin.com/in/ansonsch/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
-              >
-                <FaLinkedin className="h-5 w-5" />
-                <span>LinkedIn</span>
-              </a>
-            </div>
-          </motion.div>
+          {/* Right Section - Team Cards */}
+          <div className="grid gap-6">
+            <motion.div
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
+              custom={0}
+              initial="hidden"
+              animate={controls}
+              variants={cardVariants}
+            >
+              <img
+                src="/members/anson.png"
+                alt="Anson Chu"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
+              />
+              <div className="px-4 max-w-full sm:max-w-[70%]">
+                <h3 className="text-lg font-semibold text-[#3D2930]">Anson Chu</h3>
+                <p className="text-[#3D2930] font-semibold">Head of Consulting, Alpha Zeta</p>
+                <p className="text-[#3D2930]">
+                  Anson is currently an incoming associate consultant intern at Bain & Company San Francisco. With experience working with early-stage startups, he hopes to utilize his ground-up business acumen to solve modern business problems.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/ansonsch/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
+                >
+                  <FaLinkedin className="h-5 w-5" />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
+              custom={1}
+              initial="hidden"
+              animate={controls}
+              variants={cardVariants}
+            >
+              <img
+                src="/members/eddie.png"
+                alt="Eddie Wang"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
+              />
+              <div className="px-4 max-w-full sm:max-w-[70%]">
+                <h3 className="text-lg font-semibold text-[#3D2930]">Eddie Wang</h3>
+                <p className="text-[#3D2930] font-semibold">Consulting Mentor, Alpha Zeta</p>
+                <p className="text-[#3D2930]">
+                  Eddie is currently an analyst at a stealth startup in San Francisco. He previously held internships at Keenly, Inc., and Citi, where he gained expertise in business research and market research.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/edwardwngg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
+                >
+                  <FaLinkedin className="h-5 w-5" />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

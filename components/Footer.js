@@ -8,13 +8,26 @@ const Footer = () => {
       <p className="text-xs text-[#3D2930]">&copy; 2024 Alpha Zeta. All rights reserved.</p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <div className="flex gap-4 sm:gap-6">
-          <a href="https://www.instagram.com/alphazeta.sc/" target="_blank" rel="noopener noreferrer" className="text-[#3D2930] hover:text-[#EEC3E8]">
+          <a 
+            href="https://www.instagram.com/alphazeta.sc/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[#3D2930] transition-transform duration-300 hover:scale-110"
+          >
             <FaInstagram className="w-5 h-5" />
           </a>
-          <a href="https://www.linkedin.com/company/alpha-kappa-psi-alpha-zeta/" target="_blank" rel="noopener noreferrer" className="text-[#3D2930] hover:text-[#EEC3E8]">
+          <a 
+            href="https://www.linkedin.com/company/alpha-kappa-psi-alpha-zeta/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[#3D2930] transition-transform duration-300 hover:scale-110"
+          >
             <FaLinkedin className="w-5 h-5" />
           </a>
-          <a href="mailto:alphazeta@gmail.com" className="text-[#3D2930] hover:text-[#EEC3E8]">
+          <a 
+            href="mailto:alphazeta@gmail.com" 
+            className="text-[#3D2930] transition-transform duration-300 hover:scale-110"
+          >
             <FaEnvelope className="w-5 h-5" />
           </a>
         </div>

@@ -114,7 +114,7 @@ const AZMarketingUIUX = () => {
                 <img
                   src={teamMember.image}
                   alt={teamMember.name}
-                  className="w-16 h-16 rounded-full"
+                  className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
                 />
                 <div className='px-4'>
                   <h3 className="text-lg font-semibold text-[#3D2930]">{teamMember.name}</h3>

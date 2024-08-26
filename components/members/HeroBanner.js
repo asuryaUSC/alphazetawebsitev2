@@ -20,18 +20,18 @@ const HeroBanner = () => {
             </p>
             <button
               onClick={handleScroll}
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[#89CFF0] px-8 text-sm font-medium text-[#3D2930] shadow transition-colors hover:bg-[#EEC3E8]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
             >
               View Profiles
             </button>
           </div>
-          <img
-            src="/placeholder.svg"
-            width="600"
-            height="350"
-            alt="Alpha Zeta Members"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:w-[600px] lg:h-[350px]"
-          />
+          <div className="w-full flex justify-center">
+            <img
+              src="/members/members.png"
+              alt="Alpha Zeta Members"
+              className="rounded-xl object-cover object-center w-full max-w-[600px] h-auto"
+            />
+          </div>
         </div>
       </div>
     </section>

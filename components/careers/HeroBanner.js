@@ -64,9 +64,9 @@ const CareerHeroBanner = () => {
   };
 
   return (
-    <section className="w-full bg-[#EFF7FF] py-20">
+    <section className="w-full bg-[#EFF7FF] min-h-screen py-20 flex items-center">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
           <motion.div
             ref={ref}
             className="flex flex-col justify-center space-y-4"
@@ -126,11 +126,9 @@ const CareerHeroBanner = () => {
           </motion.div>
 
           <motion.img
-            src="/placeholder.svg"
-            width="550"
-            height="400"
+            src="/careers.png"
             alt="Careers"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+            className="mx-auto overflow-hidden rounded-xl object-cover w-full h-auto max-w-[600px] max-h-[450px]"
             initial="hidden"
             animate={controls}
             variants={imageVariants}

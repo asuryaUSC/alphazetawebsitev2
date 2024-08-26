@@ -41,8 +41,7 @@ const HeroBanner = () => {
 
   return (
     <main className="flex-1 bg-[#EFF7FF]">
-      <section className="w-full py-8 md:py-12 lg:py-16 xl:py-24 pt-[80px] md:pt-[110px] lg:pt-[240px]">
-        {/* Adjusted top padding for all screen sizes */}
+      <section className="w-full min-h-screen py-8 md:py-12 lg:py-16 xl:py-24 flex items-center">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 lg:gap-12">
             <motion.div
@@ -67,7 +66,7 @@ const HeroBanner = () => {
               <motion.div variants={buttonVariants}>
                 <Link
                   href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
-                  className="inline-flex h-12 items-center justify-center rounded-md bg-[#57A0D3] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -77,11 +76,11 @@ const HeroBanner = () => {
               </motion.div>
             </motion.div>
             <motion.img
-              src="/placeholder.svg"
-              width={550}
-              height={550}
+              src="/landing/landing-hero.png"
+              width={700}
+              height={700}
               alt="Hero"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
+              className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:w-auto"
               initial="hidden"
               animate={controls}
               variants={imageVariants}

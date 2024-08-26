@@ -50,7 +50,7 @@ const RecruitmentHeroBanner = () => {
   };
 
   return (
-    <section className="w-full bg-[#EFF7FF] py-20">
+    <section className="w-full min-h-screen bg-[#EFF7FF] py-20 flex items-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <motion.div
@@ -72,24 +72,22 @@ const RecruitmentHeroBanner = () => {
             </motion.div>
 
             <motion.div variants={buttonVariants}>
-            <Link
-              href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
-              prefetch={false}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apply Now
-            </Link>
+              <Link
+                href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+                prefetch={false}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply Now
+              </Link>
             </motion.div>
           </motion.div>
 
           <motion.img
-            src="/placeholder.svg"
-            width="550"
-            height="400"
+            src="/landing/recruitment.png"
             alt="Careers"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+            className="mx-auto h-full w-full rounded-xl object-cover"
             initial="hidden"
             animate={controls}
             variants={imageVariants}

@@ -4,14 +4,13 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const AZPM = () => {
-  // Animation controls
+  // Animation controls for triggering animations when in view
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: true, // Animation triggers once
-    threshold: 0.2,   // Section has to be 20% visible to trigger
+    triggerOnce: true,
+    threshold: 0.2, // Section must be 20% in view to trigger animations
   });
 
-  // Start the animation when the section is in view
   useEffect(() => {
     if (inView) {
       controls.start('visible');
@@ -33,7 +32,7 @@ const AZPM = () => {
   };
 
   return (
-    <section id='az-pm' ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section id="az-pm" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -72,7 +71,7 @@ const AZPM = () => {
                   description: 'Prepare for PM interviews by mastering common questions, case studies, and interview techniques specific to product management roles.',
                 },
               ].map((item, index) => (
-                <div className="flex items-start gap-4" key={index}>
+                <div className="flex items-start gap-4" key={index} style={{ alignItems: 'center' }}>
                   <FaCheckCircle style={{ width: '24px', height: '24px', flexShrink: 0 }} className="text-[#57A0D3]" />
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <h3 className="text-lg font-semibold text-[#3D2930]" style={{ margin: 0 }}>{item.title}</h3>
@@ -83,10 +82,10 @@ const AZPM = () => {
             </div>
           </motion.div>
 
-          {/* Right Section - Team Cards */}
+          {/* Right Section - Team Card for Darren Tsang */}
           <div className="grid gap-6">
             <motion.div
-              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-auto sm:max-h-[350px] flex-col sm:flex-row"
               custom={0}
               initial="hidden"
               animate={controls}
@@ -95,9 +94,9 @@ const AZPM = () => {
               <img
                 src="/members/darren.png"
                 alt="Darren Tsang"
-                className="w-16 h-16 rounded-full mb-4 sm:mb-0 sm:mr-4"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
               />
-              <div className='px-4 max-w-full sm:max-w-[70%]'>
+              <div className="px-4 max-w-full sm:max-w-[70%]">
                 <h3 className="text-lg font-semibold text-[#3D2930]">Darren Tsang</h3>
                 <p className="text-[#3D2930] font-semibold">ProductSC Curriculum Head + Alpha Zeta PM Head</p>
                 <p className="text-[#3D2930]">
