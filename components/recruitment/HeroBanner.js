@@ -1,6 +1,6 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { scroller } from 'react-scroll';
 import Link from 'next/link';
 
@@ -11,6 +11,21 @@ const RecruitmentHeroBanner = () => {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  // State to handle screen size for hover effect
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Detect screen size to disable hover effect on mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // 1024px and above is considered desktop
+    };
+
+    handleResize(); // Run on component mount
+    window.addEventListener('resize', handleResize); // Update on window resize
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Start the animation when the section is in view
   useEffect(() => {
@@ -45,7 +60,7 @@ const RecruitmentHeroBanner = () => {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, scale: 1 }, // Set scale to 1 initially
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: 'easeInOut' } },
   };
 
@@ -87,10 +102,19 @@ const RecruitmentHeroBanner = () => {
           <motion.img
             src="/landing/recruitment.png"
             alt="Careers"
-            className="mx-auto h-full w-full rounded-xl object-cover"
+            className="mx-auto h-full w-full rounded-xl object-cover max-w-[800px] max-h-[600px]" // Adjust the max width and height
             initial="hidden"
             animate={controls}
             variants={imageVariants}
+            whileHover={isDesktop ? {
+              scale: 1.05,           // Grow effect
+              rotate: 3,             // Slight rotation
+              skewX: -2,             // Skew for a 3D effect
+              transition: {
+                duration: 0.6,       // Smooth transition
+                ease: [0.25, 0.46, 0.45, 0.94],  // Custom easing
+              },
+            } : {}}
           />
         </div>
       </div>

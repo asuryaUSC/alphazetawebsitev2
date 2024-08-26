@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const HeroBanner = () => {
   // Animation control
@@ -10,6 +10,21 @@ const HeroBanner = () => {
     triggerOnce: true, // Only animate once
     threshold: 0.2, // Trigger animation when 20% of the component is in view
   });
+
+  // State to handle screen size for hover effect
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Detect screen size to disable hover effect on mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // 1024px and above is considered desktop
+    };
+
+    handleResize(); // Run on component mount
+    window.addEventListener('resize', handleResize); // Update on window resize
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Start the animation when the section is in view
   useEffect(() => {
@@ -35,7 +50,7 @@ const HeroBanner = () => {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, scale: 1 }, // Remove scaling here
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: 'easeInOut' } }
   };
 
@@ -77,13 +92,22 @@ const HeroBanner = () => {
             </motion.div>
             <motion.img
               src="/landing/landing-hero.png"
-              width={700}
-              height={700}
+              width={isDesktop ? 1800 : 700} // Larger image on desktop
+              height={isDesktop ? 1800 : 700}
               alt="Hero"
-              className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:w-auto"
+              className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:w-auto max-w-full"
               initial="hidden"
               animate={controls}
               variants={imageVariants}
+              whileHover={isDesktop ? {
+                scale: 1.1,           // Grow effect (small increase)
+                rotate: 3,             // Slight rotation
+                skewX: -2,             // Skew for a 3D effect
+                transition: {
+                  duration: 0.6,       // Make it feel smooth
+                  ease: [0.25, 0.46, 0.45, 0.94],  // Custom easing
+                },
+              } : {}}
             />
           </div>
         </div>
