@@ -99,7 +99,7 @@ const Navbar = () => {
           ))}
         </nav>
         <Link
-          href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
+          href="https://uoy80cusxjt.typeform.com/AlphaZeta"
           className="hidden md:inline-flex h-10 items-center justify-center ml-6 rounded-md bg-[#89CFF0] px-6 py-2 text-sm font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
           target="_blank"
