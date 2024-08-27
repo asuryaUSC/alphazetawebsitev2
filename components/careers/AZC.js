@@ -98,7 +98,7 @@ const AZC = () => {
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
                 <h3 className="text-lg font-semibold text-[#3D2930]">Anson Chu</h3>
-                <p className="text-[#3D2930] font-semibold">Head of Consulting, Alpha Zeta</p>
+                <p className="text-[#3D2930] font-semibold">Consulting Mentor, Alpha Zeta</p>
                 <p className="text-[#3D2930]">
                   Anson is currently an incoming associate consultant intern at Bain & Company San Francisco. With experience working with early-stage startups, he hopes to utilize his ground-up business acumen to solve modern business problems.
                 </p>

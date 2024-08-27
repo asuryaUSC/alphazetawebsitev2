@@ -95,7 +95,7 @@ const AZ13 = () => {
             {[
               {
                 name: 'Charlie Huang',
-                role: 'Head of Investment Banking, Alpha Zeta',
+                role: 'Investment Banking Mentor, Alpha Zeta',
                 description:
                   'Charlie is currently an incoming summer analyst at J.P. Morgan San Francisco. Previously having experience in tech startups, he wants to intertwine his passion with the finance world. Charlie also received offers from Deutsche and Guggenheim.',
                 image: '/members/charlie.png',

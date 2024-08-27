@@ -88,7 +88,7 @@ const AZMarketingUIUX = () => {
             {[
               {
                 name: 'Julia Purwadi',
-                role: 'Head of Marketing, Alpha Zeta',
+                role: 'Marketing Mentor, Alpha Zeta',
                 description:
                   'Julia is the AZ Marketing head. She recently completed a marketing internship at TATCHA, part of Unilever Prestige, and is majoring in Business Administration with an emphasis in Marketing.',
                 linkedin: 'https://www.linkedin.com/in/juliapurwadi/',
@@ -96,7 +96,7 @@ const AZMarketingUIUX = () => {
               },
               {
                 name: 'Yuna Jang',
-                role: 'Head of UI/UX, Alpha Zeta',
+                role: 'UI/UX Mentor, Alpha Zeta',
                 description:
                   'Yuna is the AZ UI/UX head. She recently completed a social media marketing internship at Deloitte and is majoring in Design and minoring in Web Development.',
                 linkedin: 'https://www.linkedin.com/in/yunajang/',

@@ -88,7 +88,7 @@ const AZCS = () => {
             {[
               {
                 name: 'Aaditya Surya',
-                role: 'Head of Computer Science, Alpha Zeta',
+                role: 'Computer Science Mentor, Alpha Zeta',
                 description:
                   'Aaditya has 5 years of experience in machine learning and has a published paper in both Cornell and Butler libraries. He provides mentorship and guidance to Alpha Zeta students on machine learning research, coding, and technical preparation.',
                 image: '/members/aaditya.png',

@@ -97,7 +97,7 @@ const AZAccounting = () => {
             />
             <div className="px-4 max-w-full sm:max-w-[70%]">
               <h3 className="text-lg font-semibold text-[#3D2930]">Elena Mao</h3>
-              <p className="text-[#3D2930] font-semibold">Head of Accounting, Alpha Zeta</p>
+              <p className="text-[#3D2930] font-semibold">Accounting Mentor, Alpha Zeta</p>
               <p className="text-[#3D2930]">
                 Elena is an incoming summer Tax Consultant intern at Deloitte Los Angeles. She is exploring various specializations and will most likely be in the general Business Tax Services or International Tax group. Elena also received offers from EY and KPMG.
               </p>

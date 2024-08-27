@@ -98,7 +98,7 @@ const AZEntrepreneurship = () => {
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
                 <h3 className="text-lg font-semibold text-[#3D2930]">Darren Tsang</h3>
-                <p className="text-[#3D2930] font-semibold">Head of Entrepreneurship, Alpha Zeta</p>
+                <p className="text-[#3D2930] font-semibold">Entrepreneurship Mentor, Alpha Zeta</p>
                 <p className="text-[#3D2930]">
                   Darren leads the entrepreneurship division at Alpha Zeta, offering mentorship to aspiring entrepreneurs and guiding them through the process of launching and growing a startup. He has been part of multiple startups and is now building a venture valued at $2 million.
                 </p>

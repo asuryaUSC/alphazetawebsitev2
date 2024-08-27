@@ -98,7 +98,7 @@ const AZPM = () => {
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
                 <h3 className="text-lg font-semibold text-[#3D2930]">Darren Tsang</h3>
-                <p className="text-[#3D2930] font-semibold">ProductSC Curriculum Head + Alpha Zeta PM Head</p>
+                <p className="text-[#3D2930] font-semibold">Product Management Mentor</p>
                 <p className="text-[#3D2930]">
                   Darren, with experience from a variety of SaaS to Series C startups, leads the product management curriculum, shaping programs to equip students with practical product management skills.
                 </p>

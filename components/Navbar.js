@@ -38,14 +38,14 @@ const Navbar = () => {
   };
 
   const handleScrollToSection = (sectionId) => {
-    const offset = window.innerWidth < 768 ? -50 : 0; // Adjust for mobile (negative offset)
+    const offset = window.innerWidth < 768 ? -50 : 0;
     scroller.scrollTo(sectionId, {
       duration: 800,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: offset, // Add the offset to account for the navbar
+      offset: offset,
     });
-    setIsOpen(false); // Close the menu after scrolling
+    setIsOpen(false);
   };
 
   const handleNavigation = (item) => {
@@ -80,9 +80,8 @@ const Navbar = () => {
           <img 
             src="/navlogo.png" 
             alt="Alpha Zeta Logo" 
-            className="h-10 w-auto" // Ensure the logo does not stretch, keep height at 40px and adjust width proportionally
+            className="h-10 w-auto"
           />
-          {/* Alpha Zeta Text */}
           <span className="font-bold text-lg">Alpha Zeta</span>
         </motion.div>
       </Link>
@@ -99,7 +98,6 @@ const Navbar = () => {
             </motion.span>
           ))}
         </nav>
-        {/* Apply Now Button */}
         <Link
           href="https://uoy80cusxjt.typeform.com/to/CxR5QHKw"
           className="hidden md:inline-flex h-10 items-center justify-center ml-6 rounded-md bg-[#89CFF0] px-6 py-2 text-sm font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
@@ -109,7 +107,6 @@ const Navbar = () => {
         >
           Apply Now
         </Link>
-        {/* Mobile Menu Button */}
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
           {isOpen ? <FiX className="w-6 h-6 text-[#89CFF0]" /> : <FiMenu className="w-6 h-6 text-[#89CFF0]" />}
         </button>
@@ -126,7 +123,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <span
                   key={item.title}
-                  className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4 cursor-pointer"
+                  className="w-full text-center py-2 text-sm font-medium flex items-center justify-center px-4 cursor-pointer text-[#3D2930] hover:bg-[#89CFF0] hover:text-[#3D2930] focus:bg-[#89CFF0] focus:text-[#3D2930]"
                   onClick={() => handleNavigation(item)}
                 >
                   {item.title}
