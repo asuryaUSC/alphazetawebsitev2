@@ -10,7 +10,6 @@ const MemberGrid = () => {
   const [designationFilter, setDesignationFilter] = useState('');
   const [pledgeClassFilter, setPledgeClassFilter] = useState('');
   const [majorFilter, setMajorFilter] = useState('');
-  const [minorFilter, setMinorFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const membersPerPage = 16;
 
@@ -33,7 +32,6 @@ const MemberGrid = () => {
         member.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
         member.major.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (member.second_major && member.second_major.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (member.minor && member.minor.toLowerCase().includes(searchTerm.toLowerCase())) ||
         member.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
@@ -52,11 +50,7 @@ const MemberGrid = () => {
       );
     }
 
-    if (minorFilter) {
-      filtered = filtered.filter(member => member.minor && member.minor.includes(minorFilter));
-    }
-
-    if (!designationFilter && !pledgeClassFilter && !majorFilter && !minorFilter && !searchTerm) {
+    if (!designationFilter && !pledgeClassFilter && !majorFilter && !searchTerm) {
       filtered = filtered.sort((a, b) => {
         if (a.designation === 'Executive Board' && b.designation !== 'Executive Board') return -1;
         if (a.designation !== 'Executive Board' && b.designation === 'Executive Board') return 1;
@@ -66,11 +60,10 @@ const MemberGrid = () => {
 
     setFilteredMembers(filtered);
     setCurrentPage(1);
-  }, [searchTerm, designationFilter, pledgeClassFilter, majorFilter, minorFilter, members]);
+  }, [searchTerm, designationFilter, pledgeClassFilter, majorFilter, members]);
 
   const uniquePledgeClasses = [...new Set(members.map(member => member.pledgeClass))];
   const uniqueMajors = [...new Set(members.flatMap(member => [member.major, member.second_major].filter(Boolean)))];
-  const uniqueMinors = [...new Set(members.flatMap(member => member.minor ? member.minor.split(', ') : []))];
 
   const indexOfLastMember = currentPage * membersPerPage;
   const indexOfFirstMember = indexOfLastMember - membersPerPage;
@@ -82,6 +75,10 @@ const MemberGrid = () => {
       duration: 500,
       smooth: true
     });
+  };
+
+  const handlePledgeClassClick = (pledgeClass) => {
+    setPledgeClassFilter(pledgeClass);
   };
 
   // Framer Motion Variants
@@ -98,6 +95,7 @@ const MemberGrid = () => {
   return (
     <section id="member-grid" className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
       <div className="container mx-auto px-4 md:px-6">
+        {/* Filters */}
         <div className="flex flex-wrap justify-between items-center mb-6">
           <div className="flex flex-wrap gap-4 items-center">
             <div className="flex items-center gap-2">
@@ -142,20 +140,6 @@ const MemberGrid = () => {
                 ))}
               </select>
             </div>
-            <div className="flex items-center gap-2">
-              <label htmlFor="minor" className="text-sm text-[#3D2930]">Filter by Minor:</label>
-              <select
-                id="minor"
-                className="max-w-[200px] p-2 border rounded text-[#3D2930]"
-                onChange={(e) => setMinorFilter(e.target.value)}
-                value={minorFilter}
-              >
-                <option value="">All</option>
-                {uniqueMinors.map((minor, index) => (
-                  <option key={index} value={minor}>{minor}</option>
-                ))}
-              </select>
-            </div>
           </div>
           <div className="flex items-center gap-2 mt-4 sm:mt-0">
             <label htmlFor="search" className="text-sm text-[#3D2930]">Search:</label>
@@ -169,6 +153,7 @@ const MemberGrid = () => {
             />
           </div>
         </div>
+        {/* Member Grid */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           initial="hidden"
@@ -178,7 +163,7 @@ const MemberGrid = () => {
             currentMembers.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-md relative"
+                className="bg-white rounded-lg overflow-hidden shadow-md relative h-full flex flex-col"
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
@@ -189,16 +174,25 @@ const MemberGrid = () => {
                   className="w-full h-64 object-cover object-center"
                   style={{ aspectRatio: '4/3' }}
                 />
-                <div className="p-4">
-                  <motion.h3 className="text-xl font-bold text-[#3D2930] mb-2" variants={textVariants}>{member.name}</motion.h3>
-                  <motion.p className="text-sm text-[#3D2930] mb-2 font-semibold italic" variants={textVariants}>{member.role}</motion.p>
-                  <motion.p className="text-sm text-[#3D2930] mb-2 font-medium" variants={textVariants}>Major: {member.major}</motion.p>
-                  <motion.p className="text-sm text-[#3D2930] mb-4" variants={textVariants}>{member.description}</motion.p>
+                <div className="p-4 flex flex-col justify-between flex-grow">
+                  <div>
+                    <motion.h3 className="text-xl font-bold text-[#3D2930] mb-2" variants={textVariants}>{member.name}</motion.h3>
+                    <motion.p className="text-sm text-[#3D2930] mb-2 font-semibold" variants={textVariants}>{member.role}</motion.p>
+                    <motion.p className="text-sm text-[#3D2930] mb-2 font-medium" variants={textVariants}>Major: {member.major}</motion.p>
+                    <motion.p className="text-sm text-[#3D2930] mb-4" variants={textVariants}>{member.description}</motion.p>
+                  </div>
                   <div className="flex justify-between items-center">
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#89CFF0] hover:text-[#3D2930]">
                       <FaLinkedin className="w-5 h-5" />
                       <span className="ml-2">View Profile</span>
                     </a>
+                    <motion.p
+                      className="text-sm font-bold text-[#3D2930] cursor-pointer"
+                      onClick={() => handlePledgeClassClick(member.pledgeClass)}
+                      variants={textVariants}
+                    >
+                      {member.pledgeClass}
+                    </motion.p>
                   </div>
                 </div>
               </motion.div>
@@ -207,6 +201,7 @@ const MemberGrid = () => {
             <p className="text-[#3D2930]">No members found.</p>
           )}
         </motion.div>
+        {/* Pagination */}
         <div className="flex justify-center mt-8">
           <Pagination
             currentPage={currentPage}

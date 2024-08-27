@@ -98,6 +98,16 @@
     "designation": "Executive Board, AZ Consulting Head"
   },
   {
+    "name": "Jocelyn Tang",
+    "role": "Vice President of Social Affairs",
+    "pledgeClass": "Fall 23",
+    "major": "Business Administration",
+    "description": "Jocelyn is a junior majoring in Business Administration with an emphasis in finance. She has been an active member of Alpha Zeta since her sophomore year and enjoys traveling, kickboxing, and watching F1 in her free time.",
+    "image": "/members/jocelyn.png",
+    "linkedin": "https://www.linkedin.com/in/jocelyntang45",
+    "designation": "Executive Board"
+  },
+  {
     "name": "Darren Tsang",
     "role": "AZ PM and Entrepreneurship Head",
     "pledgeClass": "Spring 23",
@@ -134,8 +144,8 @@
   {
     "name": "Aaditya Surya",
     "role": "AZ Computer Science Head",
-    "pledgeClass": "Fall 2023",
-    "major": "Computer Science",
+    "pledgeClass": "Fall 23",
+    "major": "CSBA",
     "description": "Aaditya is a junior majoring in Computer Science and Business Administration. He enjoys developing innovative tech solutions and collaborating on projects that address real-world challenges.",
     "image": "/members/aaditya.png",
     "linkedin": "https://www.linkedin.com/in/aadityasurya/",
@@ -165,8 +175,7 @@
     "name": "Claire Yang",
     "role": "Active Member",
     "pledgeClass": "Spring 24",
-    "major": "Computer Science",
-    "second_major": "Business Administration",
+    "major": "CSBA",
     "description": "Claire is a sophomore majoring in Computer Science and Business Administration. She is passionate about the intersection of business and technology, and enjoys cafe hopping, doing nails, and spending time with family and friends.",
     "image": "/members/claire.png",
     "linkedin": "https://www.linkedin.com/in/claire-y-yang",
@@ -299,6 +308,93 @@
     "description": "Jason is a sophomore majoring in Economics with a minor in Musical Studies. He enjoys practicing piano and guitar, hiking, reading, and attending concerts.",
     "image": "/members/jason.png",
     "linkedin": "https://www.linkedin.com/in/jczhang05/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Chris Feng",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Business Administration",
+    "description": "Chris is a sophomore majoring in Business Administration. He loves playing volleyball, exploring new places, and going to raves. In his free time, he stays active by joining friends for weekend adventures, whether it’s discovering new cafes or hiking nearby trails.",
+    "image": "/members/chris.png",
+    "linkedin": "http://linkedin.com/in/christopher-feng0",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Jason Byun",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Physics",
+    "second_major": "Computer Science",
+    "description": "Jason is a sophomore majoring in Physics and Computer Science. After crossing last semester, he has been eager to apply his new skills in various areas. He enjoys thrifting, singing, watching TV shows, and experimenting with different activities to stay creative.",
+    "image": "/members/jasonb.png",
+    "linkedin": "https://www.linkedin.com/in/jason-byun/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Meiyi Song",
+    "role": "Active Member",
+    "pledgeClass": "Fall 22",
+    "major": "Business Administration",
+    "second_major": "Communication",
+    "minor": "Cinematic Arts",
+    "description": "Meiyi is a senior double majoring in Business Administration and Communication, with a minor in Cinematic Arts. She has been part of Alpha Zeta since her sophomore year. Meiyi grew up in Montreal and Toronto, speaking French, Mandarin, and Spanish. She loves fashion, tennis, snowboarding, and exploring new foods.",
+    "image": "/members/meiyi.png",
+    "linkedin": "https://www.linkedin.com/in/meiyi-song",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Rachel Lee",
+    "role": "Active Member",
+    "pledgeClass": "Spring 23",
+    "major": "BFA Design",
+    "minor": "Web Development",
+    "description": "Rachel is a junior majoring in Design with a minor in Web Development. She’s passionate about branding and UI/UX design. Outside of academics, she enjoys cafe hopping and trying new restaurants. Rachel also loves discovering hidden gems in the city’s food scene and experimenting with new design ideas.",
+    "image": "/members/rachel.png",
+    "linkedin": "https://www.linkedin.com/in/rachel-lee318",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Isabelle So",
+    "role": "Active Member",
+    "pledgeClass": "Spring 23",
+    "major": "International Relations and Global Business",
+    "description": "Isabelle is a junior majoring in International Relations and Global Business with a focus on international finance. She aims to work in investment banking. Isabelle enjoys swimming, watching movies, exploring restaurants, and beach outings. She is also an active member of Delta Gamma sorority.",
+    "image": "/members/isabelle.png",
+    "linkedin": "https://www.linkedin.com/in/isabelle-so/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Leena Van",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Business Administration",
+    "minor": "Artificial Intelligence Applications",
+    "description": "Leena is a sophomore majoring in Business Administration with a minor in Artificial Intelligence Applications. She hails from Dallas, TX, and loves listening to jazz and RnB, reading webtoons, and cooking for friends and family. A fun fact about Leena is that she has a dorm cat named Soju, who keeps her company.",
+    "image": "/members/leena.png",
+    "linkedin": "https://www.linkedin.com/in/leena-van-03113225a/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Nayeon Koo",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Sociology",
+    "second_major": "Data Science",
+    "description": "Nayeon is a junior double majoring in Sociology and Data Science. She spends her free time building model kits, going on road trips, and hiking with friends. Nayeon is always on the lookout for new places to explore and enjoys the challenge of discovering remote hiking trails.",
+    "image": "/members/nayeon.png",
+    "linkedin": "www.linkedin.com/in/Nayeon-Koo",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Isabella Martinez",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Business Administration",
+    "minor": "Legal Studies",
+    "description": "Isabella, or Bella, is a junior majoring in Business Administration and minoring in Legal Studies. She’s passionate about the intersection of business and law. When not studying, she loves exploring LA with friends, skiing back in Colorado, and diving into new cultural experiences.",
+    "image": "/members/bella.png",
+    "linkedin": "https://www.linkedin.com/in/isabellaamartinez/",
     "designation": "Active Member"
   }
 ]
