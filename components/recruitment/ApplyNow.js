@@ -47,7 +47,7 @@ const ApplyNow = () => {
           Ready to Join Alpha Zeta?
         </motion.h2>
         <motion.p className="text-lg md:text-xl text-[#3D2930] mb-8" variants={fadeInUp}>
-          Apply now and become part of USC's premier co-ed business society.
+          Fill out our interest form to join into the rush process! Our formal applications open on September 4.
         </motion.p>
         <motion.div variants={buttonVariants}>
           <Link
@@ -57,7 +57,7 @@ const ApplyNow = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Apply Now
+            Interest Form
           </Link>
         </motion.div>
       </motion.div>

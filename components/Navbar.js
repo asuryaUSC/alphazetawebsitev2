@@ -105,7 +105,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Apply Now
+          Interest Form
         </Link>
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
           {isOpen ? <FiX className="w-6 h-6 text-[#89CFF0]" /> : <FiMenu className="w-6 h-6 text-[#89CFF0]" />}

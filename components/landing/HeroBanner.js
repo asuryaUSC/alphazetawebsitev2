@@ -86,7 +86,7 @@ const HeroBanner = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Apply Now
+                  Interest Form
                 </Link>
               </motion.div>
             </motion.div>
