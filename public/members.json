@@ -205,6 +205,18 @@
     "designation": "Active Member"
   },
   {
+    "name": "Nolan Chen",
+    "role": "Active Member",
+    "pledgeClass": "Fall 23",
+    "major": "Business",
+    "second_major": "",
+    "minor": "Computer Programming",
+    "description": "Nolan is a senior majoring in Business and minoring in Computer Programming. He has previously worked in product roles at startups and big tech companies and hopes to pursue a career in product management. In his free time, he enjoys playing poker, attending music festivals, and going to the beach.",
+    "image": "/members/nolan.png",
+    "linkedin": "https://www.linkedin.com/in/nolan-chen/",
+    "designation": "Active Member"
+  },
+  {
     "name": "David Yu",
     "role": "Active Member",
     "pledgeClass": "Fall 22",
@@ -245,6 +257,18 @@
     "description": "Gloria is a sophomore majoring in Business Administration with interests in marketing and design. She enjoys film, photography, visiting art museums, and spending time with family and friends.",
     "image": "/members/gloria.png",
     "linkedin": "https://www.linkedin.com/in/gloriaapan/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Eugene Park",
+    "role": "Active Member",
+    "pledgeClass": "Fall 23",
+    "major": "Business Administration",
+    "second_major": "Psychology",
+    "minor": "",
+    "description": "Eugene is a freshman double majoring in Business Administration and Psychology. He rushed Alpha Zeta during his first semester in Fall 2023. Eugene has lived in a variety of places, including South Korea, Hawaii, and Michigan. He is interested in thrifting, volleyball, and gaming. Professionally, Eugene aims to work in product management or consulting.",
+    "image": "/members/eugene.png",
+    "linkedin": "https://www.linkedin.com/in/eugenepark23/",
     "designation": "Active Member"
   },
   {
