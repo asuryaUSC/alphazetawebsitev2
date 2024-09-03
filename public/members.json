@@ -164,6 +164,18 @@
     "designation": "AZ Head"
   },
   {
+    "name": "Yuna Jang",
+    "role": "UI/UX Head",
+    "pledgeClass": "Spring 24",
+    "major": "B.F.A Design",
+    "second_major": "",
+    "minor": "Web Development",
+    "description": "Yuna is a sophomore majoring in B.F.A Design and minoring in Web Development. She is passionate about UI/UX design, with experience in graphic design, 3D modeling, and digital platforms. Yuna is focused on creating impactful visual branding and user experiences.",
+    "image": "/members/yuna.png",
+    "linkedin": "https://www.linkedin.com/in/yunajang/",
+    "designation": "UI/UX Head"
+  },
+  {
     "name": "Amelie Nah",
     "role": "Active Member",
     "pledgeClass": "Spring 24",
@@ -431,6 +443,30 @@
     "description": "Isabella, or Bella, is a junior majoring in Business Administration and minoring in Legal Studies. She’s passionate about the intersection of business and law. When not studying, she loves exploring LA with friends, skiing back in Colorado, and diving into new cultural experiences.",
     "image": "/members/bella.png",
     "linkedin": "https://www.linkedin.com/in/isabellaamartinez/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Walker Blackwell",
+    "role": "Active Member",
+    "pledgeClass": "Fall 23",
+    "major": "Theatre",
+    "second_major": "",
+    "minor": "Business",
+    "description": "Walker is a first-year student at USC majoring in Theatre with a minor in Business. He has a keen interest in investment banking, acting, and public speaking. Walker is passionate about combining his creative talents with his business acumen, aspiring to excel in both fields. He is always open to engaging in meaningful conversations.",
+    "image": "/members/walker.png",
+    "linkedin": "https://www.linkedin.com/in/walker-blackwell/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Ella Kang",
+    "role": "Active Member",
+    "pledgeClass": "Fall 23",
+    "major": "Business Administration",
+    "second_major": "",
+    "minor": "",
+    "description": "Ella is a sophomore majoring in Business Administration from Redondo Beach. She is pursuing a career in investment banking and is actively involved in her sorority at USC.",
+    "image": "/members/ella.png",
+    "linkedin": "https://www.linkedin.com/in/ella-kang/",
     "designation": "Active Member"
   }
 ]
