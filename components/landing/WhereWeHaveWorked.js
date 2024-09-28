@@ -92,6 +92,7 @@ const WhereWeHaveWorked = () => {
               '/landing/companies/spacex.png',
               '/landing/companies/kpmg.png',
               '/landing/companies/bloomberg.png',
+              '/landing/companies/citadel.png',
             ].map((src, idx) => (
               <motion.div
                 key={idx}
