@@ -47,17 +47,17 @@ const ApplyNow = () => {
           Ready to Join Alpha Zeta?
         </motion.h2>
         <motion.p className="text-lg md:text-xl text-[#3D2930] mb-8" variants={fadeInUp}>
-          Fill out our interest form to join into the rush process! Our formal applications open on September 4.
+          Apply now and become part of USC's premier co-ed business society. Applications are due September 7th 11:59.
         </motion.p>
         <motion.div variants={buttonVariants}>
           <Link
-            href="https://uoy80cusxjt.typeform.com/AlphaZeta"
+            href="https://uoy80cusxjt.typeform.com/AlphaZetaApply"
             className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Interest Form
+            Apply Now
           </Link>
         </motion.div>
       </motion.div>
