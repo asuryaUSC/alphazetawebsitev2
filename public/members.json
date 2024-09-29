@@ -164,6 +164,17 @@
     "designation": "AZ Head"
   },
   {
+    "name": "Walker Blackwell",
+    "role": "Active Member",
+    "pledgeClass": "Fall 23",
+    "major": "Business Administration and Theatre",
+    "description": "Walker is a junior majoring in Business Administration and Theatre. He is passionate about investment banking, acting, and public speaking. He co-founded the Prison Mathematics Project, combining his interests to create meaningful impact.",
+    "image": "/members/walker.png",
+    "linkedin": "https://www.linkedin.com/in/walker-blackwell/",
+    "designation": "Active Member"
+
+  },
+  {
     "name": "Yuna Jang",
     "role": "UI/UX Head",
     "pledgeClass": "Spring 24",
