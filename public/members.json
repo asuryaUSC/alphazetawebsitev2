@@ -479,5 +479,88 @@
     "image": "/members/ella.png",
     "linkedin": "https://www.linkedin.com/in/ella-kang/",
     "designation": "Active Member"
+  },
+  {
+    "name": "Joshua Lomboy",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Accounting and Finance",
+    "description": "Josh is a sophomore studying accounting and finance. He is originally from Irvine, California and enjoys playing basketball, going to the beach, and exploring new musical artists.",
+    "image": "/members/joshua.png",
+    "linkedin": "www.LinkedIn.com/in/joshualomboy",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Beomsoo Park",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Beomsoo is a sophomore majoring in Business Administration with a strong interest in consulting, particularly at the intersection of technology and AI. Outside academics, he enjoys snowboarding, exploring new restaurants, and traveling.",
+    "image": "/members/beomsoo.png",
+    "linkedin": "https://www.linkedin.com/in/beomsoo-park/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Andy Kim",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Mathematics/Economics",
+    "minor": "Business Administration",
+    "description": "Andy is a freshman majoring in mathematics/economics. Professionally, he is interested in pursuing a career in investment banking. He enjoys attending sports games, trying out new restaurants, and thrifting in his free time.",
+    "image": "/members/andy.png",
+    "linkedin": "www.linkedin.com/in/andyakim",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Spencer Sun",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Spencer is a sophomore majoring in Business Administration. He is interested in the intersection between finance and technology, bouldering, and films.",
+    "image": "/members/spencer.png",
+    "linkedin": "https://www.linkedin.com/in/spencersun15/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Angela Ren",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Angela is a sophomore studying Business Administration. In her free time, she loves trying new cuisines, skiing, and going to the beach with friends.",
+    "image": "/members/angela.png",
+    "linkedin": "https://www.linkedin.com/in/angela-ren/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Selina Ho",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Cognitive Science",
+    "description": "Selina is a sophomore majoring in Cognitive Science. She is passionate how innovation thrives as it allows her to craft solutions that enhance human experiences.",
+    "image": "/members/selina.png",
+    "linkedin": "https://www.linkedin.com/in/selina-ho",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Vanessa Doan",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Vanessa is a sophomore majoring in Business Administration, with an interest in consulting. Aside from school, she enjoys traveling, engaging in new experiences, going to cafes, and binge watching shows.",
+    "image": "/members/vanessa.png",
+    "linkedin": "https://www.linkedin.com/in/maivan-doan",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Leia Fisher",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Economics",
+    "minor": "AI Applications",
+    "description": "Leia is a sophomore majoring in Economics and minoring in AI Applications. She is passionate about innovation and the intersection of business, tech, and design.",
+    "image": "/members/leia.png",
+    "linkedin": "www.linkedin.com/in/leiafish/",
+    "designation": "Active Member"
   }
+  
 ]

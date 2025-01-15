@@ -43,9 +43,9 @@ const RecruitmentTimeline = () => {
                 <FaCoffee className="w-4 h-4 text-[#3D2930]" />
               </div>
               <div className="font-bold text-[#3D2930]">
-                Coffee Chats Start - <span className="font-normal">August 28</span>
+                Coffee Chats - <span className="font-normal">January 21 - January 30</span>
               </div>
-              <p className="text-sm text-[#3D2930]">Appointment only, dress casual. Sign-ups coming soon.</p>
+              <p className="text-sm text-[#3D2930]">Appointment only, dress casual.</p>
             </motion.div>
 
             {/* Event 2 - Meet the Chapter */}
@@ -54,22 +54,20 @@ const RecruitmentTimeline = () => {
                 <FaUsers className="w-4 h-4 text-[#3D2930]" />
               </div>
               <div className="font-bold text-[#3D2930]">
-                Meet the Chapter - <span className="font-normal">September 3</span>
+                Meet the Chapter - <span className="font-normal">January 28</span>
               </div>
-              <div className="text-[#3D2930]">Address: TBD</div>
-              <p className="text-sm text-[#3D2930]"> 7-9 pm, address TBD. Dress business casual. </p>
+              <p className="text-sm text-[#3D2930]">7-9 PM @ 1335 W 35th Street, Business Casual.</p>
             </motion.div>
 
-            {/* Event 3 - Interactive Workshop */}
+            {/* Event 3 - Speed Dating */}
             <motion.div className="relative pl-16" initial="hidden" animate={controls} variants={eventVariants}>
               <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-[#89CFF0] rounded-full flex items-center justify-center">
                 <FaCalendarCheck className="w-4 h-4 text-[#3D2930]" />
               </div>
               <div className="font-bold text-[#3D2930]">
-                Interactive Workshop - <span className="font-normal">September 4</span>
+                Speed Dating - <span className="font-normal">January 29</span>
               </div>
-              <div className="text-[#3D2930]">Address: TBD</div>
-              <p className="text-sm text-[#3D2930]"> 7-9 pm, address TBD. Dress business casual.</p>
+              <p className="text-sm text-[#3D2930]">7-9 PM @ 1335 W 35th Street, Business Casual.</p>
             </motion.div>
           </div>
 
@@ -84,9 +82,9 @@ const RecruitmentTimeline = () => {
                 <FaFileAlt className="w-4 h-4 text-[#3D2930]" />
               </div>
               <div className="font-bold text-[#3D2930]">
-                Applications Due - <span className="font-normal">September 7</span>
+                Applications Due - <span className="font-normal">February 1</span>
               </div>
-              <p className="text-sm text-[#3D2930]">Submit by 11:59 pm. No late applications are accepted.</p>
+              <p className="text-sm text-[#3D2930]">Submit by 11:59 PM.</p>
             </motion.div>
 
             {/* Event 5 - Interviews */}
@@ -95,10 +93,9 @@ const RecruitmentTimeline = () => {
                 <FaUserTie className="w-4 h-4 text-[#3D2930]" />
               </div>
               <div className="font-bold text-[#3D2930]">
-                Interviews - <span className="font-normal">September 9-10</span>
+                Interviews - <span className="font-normal">February 3 - February 4</span>
               </div>
-              <div className="text-[#3D2930]">Address: TBD</div>
-              <p className="text-sm text-[#3D2930]">Invite only, dress business professional.</p>
+              <p className="text-sm text-[#3D2930]">Invite-only, Business Professional.</p>
             </motion.div>
 
             {/* Event 6 - Mystery Event */}
@@ -107,10 +104,9 @@ const RecruitmentTimeline = () => {
                 <FaQuestionCircle className="w-4 h-4 text-[#3D2930]" />
               </div>
               <div className="font-bold text-[#3D2930]">
-                Mystery Event - <span className="font-normal">September 12</span>
+                Mystery Event - <span className="font-normal">February 6</span>
               </div>
-              <div className="text-[#3D2930]">Address: TBD</div>
-              <p className="text-sm text-[#3D2930]"> Invite only, dress casual.</p>
+              <p className="text-sm text-[#3D2930]">Invite-only, Dress Casual.</p>
             </motion.div>
           </div>
         </div>
