@@ -163,7 +163,9 @@ const MemberGrid = () => {
             currentMembers.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-md relative h-full flex flex-col"
+                className={`rounded-lg overflow-hidden shadow-md relative h-full flex flex-col ${
+                  member.designation === 'Executive Board' ? 'bg-[#D1E8FF]' : 'bg-white'
+                }`}
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
@@ -176,10 +178,18 @@ const MemberGrid = () => {
                 />
                 <div className="p-4 flex flex-col justify-between flex-grow">
                   <div>
-                    <motion.h3 className="text-xl font-bold text-[#3D2930] mb-2" variants={textVariants}>{member.name}</motion.h3>
-                    <motion.p className="text-sm text-[#3D2930] mb-2 font-semibold" variants={textVariants}>{member.role}</motion.p>
-                    <motion.p className="text-sm text-[#3D2930] mb-2 font-medium" variants={textVariants}>Major: {member.major}</motion.p>
-                    <motion.p className="text-sm text-[#3D2930] mb-4" variants={textVariants}>{member.description}</motion.p>
+                    <motion.h3 className="text-xl font-bold text-[#3D2930] mb-2" variants={textVariants}>
+                      {member.name}
+                    </motion.h3>
+                    <motion.p className="text-sm text-[#3D2930] mb-2 font-semibold" variants={textVariants}>
+                      {member.role}
+                    </motion.p>
+                    <motion.p className="text-sm text-[#3D2930] mb-2 font-medium" variants={textVariants}>
+                      Major: {member.major}
+                    </motion.p>
+                    <motion.p className="text-sm text-[#3D2930] mb-4" variants={textVariants}>
+                      {member.description}
+                    </motion.p>
                   </div>
                   <div className="flex justify-between items-center">
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#89CFF0] hover:text-[#3D2930]">
