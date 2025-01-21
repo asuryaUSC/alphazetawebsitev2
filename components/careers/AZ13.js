@@ -94,28 +94,28 @@ const AZ13 = () => {
           <div className="grid gap-6">
             {[
               {
-                name: 'Charlie Huang',
+                name: 'Ben Lee',
                 role: 'Investment Banking Mentor, Alpha Zeta',
                 description:
-                  'Charlie is currently an incoming summer analyst at J.P. Morgan San Francisco. Previously having experience in tech startups, he wants to intertwine his passion with the finance world. Charlie also received offers from Deutsche and Guggenheim.',
-                image: '/members/charlie.png',
-                linkedin: 'https://www.linkedin.com/in/charleshuang2004/',
+                  'Ben is an incoming investment banking analyst at Harris Williams in San Francisco. He previously interned as a summer analyst at the firm and gained experience in wealth and investment management at Wells Fargo Advisors.',
+                image: '/members/ben.png',
+                linkedin: 'https://www.linkedin.com/in/benjaminlee123/',
               },
               {
-                name: 'Fiona Ko',
+                name: 'Jacob Granados',
                 role: 'Investment Banking Mentor, Alpha Zeta',
                 description:
-                  'Fiona is currently an incoming summer analyst at Lazard San Francisco. Having worked in a lab and previously a pre-med student, she wants to utilize her knowledge in healthcare to help businesses from a finance perspective. Fiona also received an offer from J.P. Morgan.',
-                image: '/members/fiona.png',
-                linkedin: 'https://www.linkedin.com/in/fionako923/',
+                  'Jacob is an incoming summer analyst at Bank of America in San Francisco, focusing on investment banking within the EGRC group. He currently works as a mergers and acquisitions analyst at Expa, specializing in strategic M&A and growth management.',
+                image: '/members/jacob.png',
+                linkedin: 'https://www.linkedin.com/in/jacobgranados/',
               },
               {
-                name: 'Justin Xiang',
+                name: 'Brandon Chung',
                 role: 'Investment Banking Mentor, Alpha Zeta',
                 description:
-                  'Justin is currently an incoming summer analyst at Bank of America Los Angeles. He is open-minded and wants to learn about different industries and groups so he is placed in the generalist group at BofA. Justin also received an offer from J.P. Morgan.',
-                image: '/members/justin.png',
-                linkedin: 'https://www.linkedin.com/in/justin-xiang12/',
+                  'Brandon is currently an incoming summer analyst at Piper Sandler in San Francisco. He is placed in the consumer retail group at Piper Sandler, where he aims to develop his investment banking skill set.',
+                image: '/members/brandon.png',
+                linkedin: 'https://www.linkedin.com/in/-brandon-chung-/',
               },
             ].map((teamMember, index) => (
               <motion.div

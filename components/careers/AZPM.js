@@ -92,18 +92,18 @@ const AZPM = () => {
               variants={cardVariants}
             >
               <img
-                src="/members/darren.png"
+                src="/members/nolan.png"
                 alt="Darren Tsang"
                 className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
-                <h3 className="text-lg font-semibold text-[#3D2930]">Darren Tsang</h3>
+                <h3 className="text-lg font-semibold text-[#3D2930]">Nolan Chen</h3>
                 <p className="text-[#3D2930] font-semibold">Product Management Mentor</p>
                 <p className="text-[#3D2930]">
-                  Darren, with experience from a variety of SaaS to Series C startups, leads the product management curriculum, shaping programs to equip students with practical product management skills.
+                Nolan, with experience in AI-powered SaaS platforms and identity management solutions, brings a diverse background in product management from companies like Ushur and Okta. He specializes in product research, development, and strategy, equipping himself with hands-on experience to drive impactful solutions in the B2B SaaS space.
                 </p>
                 <a
-                  href="https://www.linkedin.com/in/dtsang527/"
+                  href="https://www.linkedin.com/in/nolan-chen/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
