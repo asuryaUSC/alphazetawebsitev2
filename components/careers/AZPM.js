@@ -122,7 +122,7 @@ const AZPM = () => {
               variants={cardVariants}
             >
               <img
-                src="/members/kevin.png"
+                src="/members/kevinhu.png"
                 alt="Kevin Hu"
                 className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
               />
