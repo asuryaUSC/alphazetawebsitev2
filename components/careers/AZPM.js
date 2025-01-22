@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaCheckCircle, FaLinkedin } from 'react-icons/fa';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const AZPM = () => {
-  // Animation controls for triggering animations when in view
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2, // Section must be 20% in view to trigger animations
+    triggerOnce: true, // Triggers animation only once when in view
+    threshold: 0.2, // 20% of the section is visible before triggering
   });
 
-  useEffect(() => {
+  // Start the animation when the section is in view
+  React.useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
@@ -32,7 +32,7 @@ const AZPM = () => {
   };
 
   return (
-    <section id="az-pm" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section id="azc" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -43,7 +43,7 @@ const AZPM = () => {
             variants={textVariants}
           >
             <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">
-              AZ PM
+              AZ Consulting
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#3D2930]">
               Product Management
@@ -82,10 +82,10 @@ const AZPM = () => {
             </div>
           </motion.div>
 
-          {/* Right Section - Team Card for Darren Tsang */}
+          {/* Right Section - Team Cards */}
           <div className="grid gap-6">
             <motion.div
-              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-auto sm:max-h-[350px] flex-col sm:flex-row"
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
               custom={0}
               initial="hidden"
               animate={controls}
@@ -93,17 +93,47 @@ const AZPM = () => {
             >
               <img
                 src="/members/nolan.png"
-                alt="Darren Tsang"
-                className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
+                alt="Nolan Chen"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
                 <h3 className="text-lg font-semibold text-[#3D2930]">Nolan Chen</h3>
                 <p className="text-[#3D2930] font-semibold">Product Management Mentor</p>
                 <p className="text-[#3D2930]">
-                Nolan, with experience in AI-powered SaaS platforms and identity management solutions, brings a diverse background in product management from companies like Ushur and Okta. He specializes in product research, development, and strategy, equipping himself with hands-on experience to drive impactful solutions in the B2B SaaS space.
+                  Nolan brings a diverse background in product management from companies like Ushur and Okta. He specializes in product research, development, and strategy, equipping himself with hands-on experience to drive impactful solutions in the B2B SaaS space.
                 </p>
                 <a
                   href="https://www.linkedin.com/in/nolan-chen/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
+                >
+                  <FaLinkedin className="h-5 w-5" />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-[250px] flex-col sm:flex-row"
+              custom={1}
+              initial="hidden"
+              animate={controls}
+              variants={cardVariants}
+            >
+              <img
+                src="/members/kevin.png"
+                alt="Kevin Hu"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
+              />
+              <div className="px-4 max-w-full sm:max-w-[70%]">
+                <h3 className="text-lg font-semibold text-[#3D2930]">Kevin Hu</h3>
+                <p className="text-[#3D2930] font-semibold">Product Management Mentor</p>
+                <p className="text-[#3D2930]">
+                  Kevin is a Business Administration student at USC Marshall with experience in product management and sales at Walmart and IBM. He has a passion for consulting, product strategy, and entrepreneurship, bringing his diverse skill set to empower aspiring PMs.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/kevinhu123/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
