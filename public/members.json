@@ -44,7 +44,7 @@
     "name": "Rachel Lee",
     "role": "Master of Rituals",
     "pledgeClass": "Spring 23",
-    "major": "BFA Design",
+    "major": "B.F.A Design",
     "minor": "Web Development",
     "description": "Rachel is a junior majoring in Design with a minor in Web Development. She’s passionate about branding and UI/UX design. Outside of academics, she enjoys cafe hopping and trying new restaurants. Rachel also loves discovering hidden gems in the city’s food scene and experimenting with new design ideas.",
     "image": "/members/rachel.png",
@@ -293,7 +293,7 @@
     "name": "Nolan Chen",
     "role": "Active Member",
     "pledgeClass": "Fall 23",
-    "major": "Business",
+    "major": "Business Administration",
     "second_major": "",
     "minor": "Computer Programming",
     "description": "Nolan is a senior majoring in Business and minoring in Computer Programming. He has previously worked in product roles at startups and big tech companies and hopes to pursue a career in product management. In his free time, he enjoys playing poker, attending music festivals, and going to the beach.",
@@ -560,6 +560,38 @@
     "description": "Vanessa is a sophomore majoring in Business Administration, with an interest in consulting. Aside from school, she enjoys traveling, engaging in new experiences, going to cafes, and binge watching shows.",
     "image": "/members/vanessa.png",
     "linkedin": "https://www.linkedin.com/in/maivan-doan",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Bea Tan",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Bea is a freshman majoring in Business Administration. She was born and raised in the Philippines and enjoys painting, photography and playing badminton in her free time.",
+    "image": "/members/bea.png",
+    "linkedin": "https://www.linkedin.com/in/beaashleytan/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Joaquin Posada",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "minor": "Artificial Intelligence Applications",
+    "description": "Joaquin is a sophomore majoring in Business Administration and minoring in Artificial Intelligence Applications. He is passionate about combining his interests in consulting and technology to develop solutions that drive business growth.",
+    "image": "/members/joaquin.png",
+    "linkedin": "www.linkedin.com/in/joaquin-posada-c",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Jeffery Chae",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Political Economy",
+    "minor": "AI Applications",
+    "description": "Jeffery is a sophomore majoring in Political Economy with a minor in AI Applications. In his free time, he enjoys outdoor activities such as going to the beach, running, or golfing.",
+    "image": "/members/jeffery.png",
+    "linkedin": "www.linkedin.com/in/jefferychae",
     "designation": "Active Member"
   },
   {
