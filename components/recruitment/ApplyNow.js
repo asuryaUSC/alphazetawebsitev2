@@ -44,20 +44,20 @@ const ApplyNow = () => {
     >
       <motion.div className="container text-center mx-auto">
         <motion.h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#3D2930]" variants={fadeInUp}>
-        Interested in Joining Alpha Zeta?
+        Ready to Join Alpha Zeta?
         </motion.h2>
         <motion.p className="text-lg md:text-xl text-[#3D2930] mb-8" variants={fadeInUp}>
-        Sign up to stay updated. Interest forms are now open!
+        Applications are now open—don’t miss your chance to join a community of driven, ambitious, and like-minded individuals.
         </motion.p>
         <motion.div variants={buttonVariants}>
           <Link
-            href="https://form.typeform.com/to/Vo5eUT30"
+            href="https://form.typeform.com/to/kRyg0z6B"
             className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Interest Form
+            Apply Now
           </Link>
         </motion.div>
       </motion.div>
