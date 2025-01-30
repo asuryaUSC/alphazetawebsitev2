@@ -604,6 +604,15 @@
     "image": "/members/leia.png",
     "linkedin": "www.linkedin.com/in/leiafish/",
     "designation": "Active Member"
+  },
+  {
+    "name": "Lance Lai",
+    "role": "Active Member",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Lance is a sophomore majoring in Business Administration with an interest in consulting. He was born and raised in Chicago and in his free time he likes to play volleyball, golf and poker.",
+    "image": "/members/lance.png",
+    "linkedin": "https://www.linkedin.com/in/lance-laI-1428a8277",
+    "designation": "Active Member"
   }
-  
 ]
