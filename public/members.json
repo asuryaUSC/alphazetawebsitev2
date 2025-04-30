@@ -104,6 +104,18 @@
     "designation": "Executive Board"
   },
   {
+    "name": "Ella Kang",
+    "role": "Active Member",
+    "pledgeClass": "Fall 23",
+    "major": "Business Administration",
+    "second_major": "",
+    "minor": "",
+    "description": "Ella is a sophomore majoring in Business Administration from Redondo Beach. She is involved in Trojan Investing Society and she is looking for stim :)",
+    "image": "/members/ella.png",
+    "linkedin": "https://www.linkedin.com/in/ella-kang/",
+    "designation": "Active Member"
+  },
+  {
     "name": "Austin Lin",
     "role": "Active Member",
     "pledgeClass": "Spring 23",
@@ -477,18 +489,6 @@
     "description": "Walker is a first-year student at USC majoring in Theatre with a minor in Business. He has a keen interest in investment banking, acting, and public speaking. Walker is passionate about combining his creative talents with his business acumen, aspiring to excel in both fields. He is always open to engaging in meaningful conversations.",
     "image": "/members/walker.png",
     "linkedin": "https://www.linkedin.com/in/walker-blackwell/",
-    "designation": "Active Member"
-  },
-  {
-    "name": "Ella Kang",
-    "role": "Active Member",
-    "pledgeClass": "Fall 23",
-    "major": "Business Administration",
-    "second_major": "",
-    "minor": "",
-    "description": "Ella is a sophomore majoring in Business Administration from Redondo Beach. She is involved in Trojan Investing Society and she is looking for stim :)",
-    "image": "/members/ella.png",
-    "linkedin": "https://www.linkedin.com/in/ella-kang/",
     "designation": "Active Member"
   },
   {
