@@ -76,6 +76,7 @@ const WhereWeHaveWorked = () => {
         >
           <Slider {...settings}>
             {[
+              '/landing/companies/goldman.png',
               '/landing/companies/apple.png',
               '/landing/companies/bain.png',
               '/landing/companies/jpm.png',
@@ -92,7 +93,6 @@ const WhereWeHaveWorked = () => {
               '/landing/companies/spacex.png',
               '/landing/companies/kpmg.png',
               '/landing/companies/bloomberg.png',
-              '/landing/companies/citadel.png',
             ].map((src, idx) => (
               <motion.div
                 key={idx}
