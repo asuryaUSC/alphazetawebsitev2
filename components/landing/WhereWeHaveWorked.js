@@ -37,7 +37,7 @@ const WhereWeHaveWorked = () => {
   };
 
   return (
-    <section className="bg-[#EEF7FF] py-12 md:py-24 lg:py-32">
+    <section className="bg-gradient-to-br from-[#EFF7FF] via-[#E5F2FF] to-[#D6F0FF] py-12 md:py-24 lg:py-32">
       <div className="container mx-auto">
         <motion.div
           ref={ref}

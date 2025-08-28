@@ -47,47 +47,83 @@ const FAQSection = () => {
   return (
     <motion.section
       ref={ref}
-      className="bg-[#E5F2FF] py-12 md:py-20 px-4 md:px-6"
+      className="relative bg-gradient-to-b from-[#E5F2FF] via-[#EDF5FF] to-[#F0F8FF] py-16 md:py-24 px-4 md:px-6 overflow-hidden"
       initial="hidden"
       animate={controls}
       variants={fadeInUp}
     >
-      <div className="container mx-auto">
-        {/* Header Bubble */}
-        <motion.div variants={fadeInUp} className="text-center mb-8">
-          <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-32 h-32 bg-[#89CFF0]/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 left-10 w-24 h-24 bg-[#89CFF0]/15 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#89CFF0]/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto relative z-10">
+        {/* Header */}
+        <motion.div variants={fadeInUp} className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#89CFF0]/80 to-[#7AC0E8]/80 backdrop-blur-sm px-6 py-3 text-sm font-semibold text-[#3D2930] border border-[#89CFF0]/30 shadow-lg">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             Frequently Asked Questions
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 text-[#3D2930]">
-            Frequently Asked Questions
+          <h2 className="text-4xl md:text-5xl font-black mt-6 mb-4 text-[#3D2930] leading-tight">
+            Got Questions?
+            <br />
+            <span className="bg-gradient-to-r from-[#3D2930] to-[#3D2930]/70 bg-clip-text text-transparent">We've Got Answers</span>
           </h2>
-          <p className="mt-2 text-lg md:text-xl text-[#3D2930]">
-            Below are some of the most common questions about Alpha Zeta and our recruitment process.
+          <p className="mt-4 text-xl text-[#3D2930]/70 max-w-2xl mx-auto leading-relaxed">
+            Everything you need to know about Alpha Zeta and our recruitment process
           </p>
         </motion.div>
 
-        {/* NextUI Accordion without motion.div wrapping */}
-        <Accordion className="w-full mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              aria-label={`Accordion ${index + 1}`}
-              title={faq.question}
-              className="text-[#3D2930] text-center"
-              css={{
-                ".nextui-accordion-content": {
-                  textAlign: "center", // Ensures the answer is centered
-                  padding: "10px 0", // Adds padding between items
-                },
-                ".nextui-accordion-title": {
-                  textAlign: "center", // Ensures the question is centered
-                },
-              }}
-            >
-              <div className="text-center text-[#3D2930]">{faq.answer}</div>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        {/* Enhanced FAQ Accordion */}
+        <motion.div 
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto"
+        >
+          <Accordion 
+            className="space-y-4"
+            variant="splitted"
+          >
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                aria-label={`FAQ ${index + 1}`}
+                title={
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-[#89CFF0] to-[#7AC0E8] flex items-center justify-center text-[#3D2930] font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <span className="text-lg font-semibold text-[#3D2930]">{faq.question}</span>
+                  </div>
+                }
+                className="bg-white/70 backdrop-blur-sm border border-[#89CFF0]/20 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white/80"
+                classNames={{
+                  trigger: "py-6 px-6 hover:bg-transparent",
+                  content: "px-6 pb-6",
+                  title: "text-left"
+                }}
+              >
+                <div className="text-[#3D2930]/80 text-base leading-relaxed pl-11">
+                  {faq.answer}
+                </div>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+
+        {/* Call-to-action at bottom */}
+        <motion.div 
+          variants={fadeInUp}
+          className="text-center mt-16"
+        >
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/50 backdrop-blur-sm rounded-full border border-[#89CFF0]/30 text-[#3D2930]/70">
+            <span>Still have questions?</span>
+            <span className="font-semibold text-[#3D2930]">Reach out to us at recruitment events!</span>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

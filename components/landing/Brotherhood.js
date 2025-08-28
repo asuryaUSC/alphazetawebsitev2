@@ -74,7 +74,7 @@ const Brotherhood = () => {
   };
 
   return (
-    <section className="bg-[#EEF7FF] py-12 md:py-24 lg:py-32" ref={ref}>
+    <section className="bg-gradient-to-br from-[#EFF7FF] via-[#E5F2FF] to-[#D6F0FF] py-12 md:py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
         <div className="space-y-4">
           <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">

@@ -93,7 +93,7 @@ const MemberGrid = () => {
   };
 
   return (
-    <section id="member-grid" className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
+    <section id="member-grid" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-[#EEF7FF] via-[#E5F2FF] to-[#D6F0FF]">
       <div className="container mx-auto px-4 md:px-6">
         {/* Filters */}
         <div className="flex flex-wrap justify-between items-center mb-6">
@@ -173,8 +173,13 @@ const MemberGrid = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover object-center"
-                  style={{ aspectRatio: '4/3' }}
+                  className={`w-full h-64 object-cover object-center ${
+                    member.name === 'Jacob Granados' ? 'object-contain' : 'object-cover'
+                  }`}
+                  style={{ 
+                    aspectRatio: '4/3',
+                    ...(member.name === 'Jacob Granados' && { objectPosition: 'center 20%' })
+                  }}
                 />
                 <div className="p-4 flex flex-col justify-between flex-grow">
                   <div>

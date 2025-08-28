@@ -55,60 +55,102 @@ const HeroBanner = () => {
   };
 
   return (
-    <main className="flex-1 bg-[#EFF7FF]">
-      <section className="w-full min-h-screen py-8 md:py-12 lg:py-16 xl:py-24 flex items-center">
+    <main className="flex-1 relative bg-gradient-to-br from-[#EFF7FF] via-[#E5F2FF] to-[#D6F0FF] overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Removed animated bubble elements */}
+      </div>
+
+      <section className="relative z-10 w-full min-h-screen pt-24 md:pt-28 lg:pt-32 pb-8 md:pb-12 lg:pb-16 xl:pb-24 flex items-center">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 lg:gap-12">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <motion.div
               ref={ref}
-              className="space-y-4"
+              className="space-y-8 w-full"
               initial="hidden"
               animate={controls}
-              variants={titleVariants}
             >
-              <motion.h1
-                className="text-5xl font-bold tracking-tighter text-[#3D2930] sm:text-6xl md:text-7xl lg:text-8xl/none"
-                variants={titleVariants}
-              >
-                Welcome to Alpha Zeta
-              </motion.h1>
-              <motion.p
-                className="max-w-[700px] text-[#3D2930] md:text-xl"
-                variants={textVariants}
-              >
-                USC's Premiere Co-Ed Business Society
-              </motion.p>
-              <motion.div variants={buttonVariants}>
+              <motion.div className="space-y-6" variants={titleVariants}>
+                <div className="flex justify-center">
+                  <span className="inline-block px-4 py-2 bg-[#89CFF0]/80 backdrop-blur-sm text-[#3D2930] text-sm font-semibold rounded-full border border-[#89CFF0]/30">
+                    🎓 USC's Premier Business Society
+                  </span>
+                </div>
+                <motion.h1
+                  className="text-3xl font-black tracking-tight text-[#3D2930] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight"
+                  variants={titleVariants}
+                >
+                  Welcome to
+                  <br className="block sm:hidden" />
+                  <span className="relative inline-block ml-2 sm:ml-4">
+                    <span className="relative z-10">Alpha Zeta</span>
+                    <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-3 sm:h-4 lg:h-6 bg-[#89CFF0]/40 -rotate-1"></div>
+                  </span>
+                </motion.h1>
+                <motion.p
+                  className="max-w-[600px] mx-auto text-[#3D2930]/80 text-lg sm:text-xl md:text-2xl leading-relaxed font-medium"
+                  variants={textVariants}
+                >
+                  Where ambitious minds connect, grow, and shape the future of business together.
+                </motion.p>
+              </motion.div>
+
+              <motion.div variants={buttonVariants} className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <Link
-                  href="https://form.typeform.com/to/kRyg0z6B"
-                  className="inline-flex h-12 items-center justify-center rounded-md bg-[#89CFF0] px-6 py-3 text-md font-medium text-[#3D2930] shadow transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50"
+                  href="https://tally.so/r/nWLPMe"
+                  className="group relative inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center rounded-2xl bg-gradient-to-r from-[#89CFF0] to-[#7AC0E8] px-6 sm:px-8 py-4 text-base sm:text-lg font-bold text-[#3D2930] shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#89CFF0]/50 disabled:pointer-events-none disabled:opacity-50 overflow-hidden"
                   prefetch={false}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Apply Now
+                  <span className="relative z-10 flex items-center gap-2">
+                    Fill Out Our Interest Form
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 </Link>
+                
+                <button
+                  onClick={() => {
+                    const aboutSection = document.getElementById('about-us');
+                    if (aboutSection) {
+                      aboutSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center rounded-2xl border-2 border-[#3D2930]/20 bg-white/50 backdrop-blur-sm px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold text-[#3D2930] transition-all duration-300 ease-in-out hover:bg-white/80 hover:border-[#3D2930]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3D2930]"
+                >
+                  Learn More
+                </button>
               </motion.div>
             </motion.div>
-            <motion.img
-              src="/landing/landing-hero.png"
-              width={isDesktop ? 1800 : 700} // Larger image on desktop
-              height={isDesktop ? 1800 : 700}
-              alt="Hero"
-              className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:w-auto max-w-full"
+
+            <motion.div
+              className="relative mt-12 md:mt-16 lg:mt-20 w-full max-w-2xl lg:max-w-4xl"
               initial="hidden"
               animate={controls}
               variants={imageVariants}
-              whileHover={isDesktop ? {
-                scale: 1.1,           // Grow effect (small increase)
-                rotate: 3,             // Slight rotation
-                skewX: -2,             // Skew for a 3D effect
-                transition: {
-                  duration: 0.6,       // Make it feel smooth
-                  ease: [0.25, 0.46, 0.45, 0.94],  // Custom easing
-                },
-              } : {}}
-            />
+            >
+              <div className="relative">
+                <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#89CFF0]/30 to-[#7AC0E8]/30 rounded-2xl sm:rounded-3xl blur-xl"></div>
+                <motion.img
+                  src="/landing/landing-hero.png"
+                  width={isDesktop ? 1800 : 700}
+                  height={isDesktop ? 1800 : 700}
+                  alt="Alpha Zeta Community"
+                  className="relative mx-auto overflow-hidden rounded-xl sm:rounded-2xl object-cover object-center w-full h-auto shadow-2xl"
+                  whileHover={isDesktop ? {
+                    scale: 1.03,
+                    rotate: 1,
+                    transition: {
+                      duration: 0.4,
+                      ease: "easeOut",
+                    },
+                  } : {}}
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

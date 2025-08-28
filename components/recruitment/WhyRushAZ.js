@@ -31,72 +31,111 @@ const WhyRushAZ = () => {
   };
 
   return (
-    <section ref={ref} className="bg-[#E5F2FF] py-12 md:py-20 px-4 md:px-6">
+    <section ref={ref} className="relative bg-gradient-to-br from-[#E5F2FF] via-[#EDF5FF] to-[#D6F0FF] py-16 md:py-24 px-4 md:px-6 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-[#89CFF0]/10 rounded-full blur-xl animate-pulse" style={{animationDelay: '0s'}}></div>
+        <div className="absolute top-1/3 right-20 w-16 h-16 bg-[#89CFF0]/15 rounded-full blur-lg animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-[#89CFF0]/20 rounded-full blur-md animate-pulse" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-10 right-10 w-24 h-24 bg-[#89CFF0]/8 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+
       <motion.div
-        className="container mx-auto text-center mb-8"
+        className="container mx-auto text-center mb-16 relative z-10"
         initial="hidden"
         animate={controls}
         variants={containerVariants}
       >
-        <motion.div variants={itemVariants} className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">
+        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#89CFF0]/80 to-[#7AC0E8]/80 backdrop-blur-sm px-6 py-3 text-sm font-semibold text-[#3D2930] border border-[#89CFF0]/30 shadow-lg mb-6">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
           Why Rush AZ?
         </motion.div>
-        <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl pt-2 font-bold mb-2 text-[#3D2930]">
-          Why Rush Alpha Zeta?
+        <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-black mb-6 text-[#3D2930] leading-tight">
+          Why Choose 
+          <span className="relative inline-block ml-3">
+            <span className="relative z-10">Alpha Zeta?</span>
+            <div className="absolute -bottom-2 left-0 w-full h-4 bg-[#89CFF0]/40 -rotate-1"></div>
+          </span>
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-[#3D2930]">
-          Discover the benefits of joining our premier co-ed business society.
+        <motion.p variants={itemVariants} className="text-xl text-[#3D2930]/80 max-w-3xl mx-auto leading-relaxed">
+          Join a community that's committed to your growth, success, and lifelong connections in business
         </motion.p>
       </motion.div>
 
       <motion.div
-        className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8"
+        className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10"
         initial="hidden"
         animate={controls}
         variants={containerVariants}
       >
-        {/* Card 1 */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
-          <div className="bg-[#89CFF0] rounded-full p-4">
-            <BriefcaseIcon className="w-8 h-8 text-[#3D2930]" />
+        {/* Card 1 - Enhanced */}
+        <motion.div 
+          variants={itemVariants} 
+          className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center border border-[#89CFF0]/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/90"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-[#89CFF0]/5 to-[#7AC0E8]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#89CFF0] to-[#7AC0E8] shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+              <BriefcaseIcon className="w-8 h-8 text-[#3D2930]" />
+            </div>
+            <h3 className="text-xl font-bold text-[#3D2930] mb-4 group-hover:text-[#2A1F26] transition-colors">Professional Growth</h3>
+            <p className="text-[#3D2930]/80 leading-relaxed">
+              Accelerate your career through hands-on workshops, case competitions, and skill-building sessions led by industry experts.
+            </p>
           </div>
-          <h3 className="text-xl font-bold text-[#3D2930]">Professional Growth</h3>
-          <p className="text-[#3D2930]">
-            Gain valuable skills and experience through our professional development workshops and events.
-          </p>
         </motion.div>
 
-        {/* Card 2 */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
-          <div className="bg-[#89CFF0] rounded-full p-4">
-            <UsersIcon className="w-8 h-8 text-[#3D2930]" />
+        {/* Card 2 - Enhanced */}
+        <motion.div 
+          variants={itemVariants} 
+          className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center border border-[#89CFF0]/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/90"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-[#89CFF0]/5 to-[#7AC0E8]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#89CFF0] to-[#7AC0E8] shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+              <UsersIcon className="w-8 h-8 text-[#3D2930]" />
+            </div>
+            <h3 className="text-xl font-bold text-[#3D2930] mb-4 group-hover:text-[#2A1F26] transition-colors">Elite Networking</h3>
+            <p className="text-[#3D2930]/80 leading-relaxed">
+              Connect with ambitious peers, successful alumni, and top recruiters from Fortune 500 companies at exclusive events.
+            </p>
           </div>
-          <h3 className="text-xl font-bold text-[#3D2930]">Networking</h3>
-          <p className="text-[#3D2930]">
-            Build lasting connections with like-minded students and industry professionals.
-          </p>
         </motion.div>
 
-        {/* Card 3 */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
-          <div className="bg-[#89CFF0] rounded-full p-4">
-            <BadgeIcon className="w-8 h-8 text-[#3D2930]" />
+        {/* Card 3 - Enhanced */}
+        <motion.div 
+          variants={itemVariants} 
+          className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center border border-[#89CFF0]/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/90"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-[#89CFF0]/5 to-[#7AC0E8]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#89CFF0] to-[#7AC0E8] shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+              <BadgeIcon className="w-8 h-8 text-[#3D2930]" />
+            </div>
+            <h3 className="text-xl font-bold text-[#3D2930] mb-4 group-hover:text-[#2A1F26] transition-colors">Personal Mentorship</h3>
+            <p className="text-[#3D2930]/80 leading-relaxed">
+              Get paired with dedicated mentors who provide personalized guidance for your academic and professional journey.
+            </p>
           </div>
-          <h3 className="text-xl font-bold text-[#3D2930]">Mentorship</h3>
-          <p className="text-[#3D2930]">
-            Receive guidance and support from experienced upperclassmen and alumni.
-          </p>
         </motion.div>
 
-        {/* Card 4 */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 text-center">
-          <div className="bg-[#89CFF0] rounded-full p-4">
-            <HandshakeIcon className="w-8 h-8 text-[#3D2930]" />
+        {/* Card 4 - Enhanced */}
+        <motion.div 
+          variants={itemVariants} 
+          className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center border border-[#89CFF0]/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/90"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-[#89CFF0]/5 to-[#7AC0E8]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#89CFF0] to-[#7AC0E8] shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+              <HandshakeIcon className="w-8 h-8 text-[#3D2930]" />
+            </div>
+            <h3 className="text-xl font-bold text-[#3D2930] mb-4 group-hover:text-[#2A1F26] transition-colors">Exclusive Opportunities</h3>
+            <p className="text-[#3D2930]/80 leading-relaxed">
+              Access hidden job markets with direct pipelines to top-tier internships and full-time positions at leading firms.
+            </p>
           </div>
-          <h3 className="text-xl font-bold text-[#3D2930]">Career Opportunities</h3>
-          <p className="text-[#3D2930]">
-            Access exclusive job and internship opportunities through our corporate partnerships.
-          </p>
         </motion.div>
       </motion.div>
     </section>

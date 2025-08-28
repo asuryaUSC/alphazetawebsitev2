@@ -20,7 +20,7 @@ const MissionAndValues = () => {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]" ref={ref}>
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-[#EFF7FF] via-[#E5F2FF] to-[#D6F0FF]" ref={ref}>
       <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6">
         <motion.div initial="hidden" animate={controls} variants={fadeInUp} className="space-y-4 text-center">
           <div className="inline-block rounded-lg bg-[#89CFF0] px-3 py-1 text-sm text-[#3D2930]">Mission & Values</div>

@@ -1,7 +1,7 @@
 [
   {
     "name": "Julia Purwadi",
-    "role": "President",
+    "role": "Co-President",
     "pledgeClass": "Spring 23",
     "major": "Business Administration",
     "second_major": "Media Economics and Entrepreneurship",
@@ -11,8 +11,29 @@
     "designation": "Executive Board"
   },
   {
+    "name": "Anson Chu",
+    "role": "Co-President",
+    "pledgeClass": "Spring 23",
+    "major": "Political Economy",
+    "minor": "Law and Technology, Applied Analytics, AI Applications",
+    "description": "Anson is a junior majoring in Political Economy and minoring in Applied Analytics, LawTech, and AI Applications. He enjoys playing volleyball, watching trending shows, and discovering new music in his free time.",
+    "image": "/members/anson.png",
+    "linkedin": "https://www.linkedin.com/in/ansonsch/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Jacob Granados",
+    "role": "Vice President of Finance",
+    "pledgeClass": "Fall 23",
+    "major": "Business Administration",
+    "description": "Jacob is a junior majoring in Business Administration with a keen interest in investment banking. He is passionate about financial markets and enjoys staying up-to-date with the latest industry trends. In his free time, he loves playing soccer and exploring opportunities to grow both personally and professionally.",
+    "image": "/members/jacob.png",
+    "linkedin": "https://www.linkedin.com/in/jacobgranados/",
+    "designation": "Executive Board"
+  }, 
+  {
     "name": "Aaditya Surya",
-    "role": "Vice President of Administration",
+    "role": "Co-Vice President of Administration",
     "pledgeClass": "Fall 23",
     "major": "Computer Science and Business Administration",
     "description": "Aaditya is a junior majoring in Computer Science and Business Administration. He enjoys developing innovative tech solutions and collaborating on projects that address real-world challenges.",
@@ -21,91 +42,62 @@
     "designation": "Executive Board"
   },
   {
-    "name": "Jacob Granados",
-    "role": "Vice President of Professional Development",
+    "name": "Julie Wan",
+    "role": "Co-Vice President of Administration",
     "pledgeClass": "Fall 23",
     "major": "Business Administration",
-    "description": "Jacob is a junior majoring in Business Administration with a keen interest in investment banking. He is passionate about financial markets and enjoys staying up-to-date with the latest industry trends. In his free time, he loves playing soccer and exploring opportunities to grow both personally and professionally.",
-    "image": "/members/jacob.png",
-    "linkedin": "https://www.linkedin.com/in/jacobgranados/",
-    "designation": "Executive Board"
-  },  
-  {
-    "name": "Isabelle So",
-    "role": "Vice President of Finance",
-    "pledgeClass": "Spring 23",
-    "major": "International Relations and Global Business",
-    "description": "Isabelle is a junior majoring in International Relations and Global Business with a focus on international finance. She aims to work in investment banking. Isabelle enjoys swimming, watching movies, exploring restaurants, and beach outings. She is also an active member of Delta Gamma sorority.",
-    "image": "/members/isabelle.png",
-    "linkedin": "https://www.linkedin.com/in/isabelle-so/",
+    "minor": "Digital Studies",
+    "description": "Julie is a junior majoring in Business Administration and minoring in Digital Studies. She is interested in marketing and the beauty industry.",
+    "image": "/members/julie.png",
+    "linkedin": "https://www.linkedin.com/in/julie-wan-usc/",
     "designation": "Executive Board"
   },
   {
-    "name": "Rachel Lee",
-    "role": "Master of Rituals",
-    "pledgeClass": "Spring 23",
-    "major": "B.F.A Design",
-    "minor": "Web Development",
-    "description": "Rachel is a junior majoring in Design with a minor in Web Development. She’s passionate about branding and UI/UX design. Outside of academics, she enjoys cafe hopping and trying new restaurants. Rachel also loves discovering hidden gems in the city’s food scene and experimenting with new design ideas.",
-    "image": "/members/rachel.png",
-    "linkedin": "https://www.linkedin.com/in/rachel-lee318",
-    "designation": "Executive Board"
-  },
-  {
-    "name": "Claire Yang",
-    "role": "Vice President of Social Affairs",
-    "pledgeClass": "Spring 24",
-    "major": "Applied Mathematics",
-    "description": "Claire is a sophomore majoring in Applied Mathematics. She is passionate about the intersection of business and quantitative problem-solving and enjoys exploring new cafes, nail art, and spending quality time with family and friends.",
-    "image": "/members/claire.png",
-    "linkedin": "https://www.linkedin.com/in/claire-y-yang",
-    "designation": "Executive Board"
-  },
-  {
-    "name": "Gloria Pan",
-    "role": "Vice President of Social Affairs",
-    "pledgeClass": "Spring 24",
+    "name": "Charlie Huang",
+    "role": "Vice President of Professional Development",
+    "pledgeClass": "Fall 22",
     "major": "Business Administration",
-    "description": "Gloria is a sophomore majoring in Business Administration with interests in marketing and design. She enjoys film, photography, visiting art museums, and spending time with family and friends.",
-    "image": "/members/gloria.png",
-    "linkedin": "https://www.linkedin.com/in/gloriaapan/",
+    "minor": "Applied Analytics",
+    "description": "Charlie is a junior majoring in Business Administration with an emphasis on finance. He is pursuing a career in investment banking and enjoys playing basketball, tennis, golf, snowboarding, cooking, and going to the beach in his free time.",
+    "image": "/members/charlie.png",
+    "linkedin": "http://linkedin.com/in/charleshuang2004",
     "designation": "Executive Board"
   },
   {
-    "name": "Evan Zhang",
-    "role": "Vice President of Public Relations",
+    "name": "Amelie Nah",
+    "role": "Co-Vice President of Social Affairs",
     "pledgeClass": "Spring 24",
-    "major": "Business Administration",
-    "minor": "Artificial Intelligence Applications",
-    "description": "Evan is a junior majoring in Business Administration with a minor in AI Applications. He is passionate about product management and enjoys hiking, traveling, and discovering new cafes.",
-    "image": "/members/evan.png",
-    "linkedin": "https://www.linkedin.com/in/evanzhang7",
+    "major": "Biopharmaceutical Sciences",
+    "description": "Amelie is a sophomore majoring in Biopharmaceutical Sciences. She is interested in healthcare consulting and enjoys hiking, swimming, and being active.",
+    "image": "/members/amelie.png",
+    "linkedin": "https://www.linkedin.com/in/amelienah",
     "designation": "Executive Board"
   },
   {
-    "name": "Jonathan Lee",
+    "name": "Jason Zhang",
+    "role": "Co-Vice President of Social Affairs",
+    "pledgeClass": "Spring 24",
+    "major": "Economics",
+    "minor": "Musical Studies",
+    "description": "Jason is a sophomore majoring in Economics with a minor in Musical Studies. He enjoys practicing piano and guitar, hiking, reading, and attending concerts.",
+    "image": "/members/jason.png",
+    "linkedin": "https://www.linkedin.com/in/jczhang05/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Nayeon Koo",
     "role": "Vice President of External Affairs",
     "pledgeClass": "Spring 24",
-    "major": "Business Administration",
-    "description": "Jonathan is a senior majoring in Business Administration. He has been an active member since his junior year and is passionate about pursuing a career in the sports industry.",
-    "image": "/members/jonathan.png",
-    "linkedin": "https://www.linkedin.com/in/hijonathanlee",
-    "designation": "Executive Board"
-  },
-  {
-    "name": "Daniel Yang",
-    "role": "Secretary",
-    "pledgeClass": "Spring 24",
-    "major": "Artificial Intelligence for Business",
-    "minor": "Philosophy",
-    "description": "Daniel is a sophomore majoring in Artificial Intelligence for Business with a minor in Philosophy. He enjoys technology and business for social impact, along with gardening, camping, and cooking.",
-    "image": "/members/daniel.png",
-    "linkedin": "https://www.linkedin.com/in/danielyangdev/",
+    "major": "Sociology",
+    "second_major": "Data Science",
+    "description": "Nayeon is a junior double majoring in Sociology and Data Science. She spends her free time building model kits, going on road trips, and hiking with friends. Nayeon is always on the lookout for new places to explore and enjoys the challenge of discovering remote hiking trails.",
+    "image": "/members/nayeon.png",
+    "linkedin": "www.linkedin.com/in/Nayeon-Koo",
     "designation": "Executive Board"
   },
   {
     "name": "Ella Kang",
-    "role": "Active Member",
+    "role": "Secretary",
     "pledgeClass": "Fall 23",
     "major": "Business Administration",
     "second_major": "",
@@ -113,7 +105,40 @@
     "description": "Ella is a sophomore majoring in Business Administration from Redondo Beach. She is involved in Trojan Investing Society and she is looking for stim :)",
     "image": "/members/ella.png",
     "linkedin": "https://www.linkedin.com/in/ella-kang/",
-    "designation": "Active Member"
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Leia Fisher",
+    "role": "Co-Vice President of Public Relations",
+    "pledgeClass": "Fall 24",
+    "major": "Economics",
+    "minor": "Artificial Intelligence Applications",
+    "description": "Leia is a sophomore majoring in Economics and minoring in AI Applications. She is passionate about innovation and the intersection of business, tech, and design.",
+    "image": "/members/leia.png",
+    "linkedin": "www.linkedin.com/in/leiafish/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Bea Tan",
+    "role": "Co-Vice President of Public Relations",
+    "pledgeClass": "Fall 24",
+    "major": "Business Administration",
+    "description": "Bea is a freshman majoring in Business Administration. She was born and raised in the Philippines and enjoys painting, photography and playing badminton in her free time.",
+    "image": "/members/bea.png",
+    "linkedin": "https://www.linkedin.com/in/beaashleytan/",
+    "designation": "Executive Board"
+  },
+  {
+    "name": "Yuna Jang",
+    "role": "Master of Rituals",
+    "pledgeClass": "Spring 23",
+    "major": "B.F.A Design",
+    "second_major": "",
+    "minor": "Web Development",
+    "description": "Yuna is a junior majoring in B.F.A Design and minoring in Web Development. She is passionate about UI/UX design, with experience in graphic design, 3D modeling, and digital platforms. Yuna is focused on creating impactful visual branding and user experiences.",
+    "image": "/members/yuna.png",
+    "linkedin": "https://www.linkedin.com/in/yunajang/",
+    "designation": "Executive Board"
   },
   {
     "name": "Austin Lin",
@@ -139,17 +164,6 @@
     "designation": "Active Member"
   },
   {
-    "name": "Charlie Huang",
-    "role": "Active Member",
-    "pledgeClass": "Fall 22",
-    "major": "Business Administration",
-    "minor": "Applied Analytics",
-    "description": "Charlie is a junior majoring in Business Administration with an emphasis on finance. He is pursuing a career in investment banking and enjoys playing basketball, tennis, golf, snowboarding, cooking, and going to the beach in his free time.",
-    "image": "/members/charlie.png",
-    "linkedin": "http://linkedin.com/in/charleshuang2004",
-    "designation": "Active Member"
-  },
-  {
     "name": "Fiona Ko",
     "role": "Active Member",
     "pledgeClass": "Fall 23",
@@ -159,17 +173,6 @@
     "description": "Fiona is a junior double majoring in Business Administration and Human Biology. She is passionate about finance, biology, fashion, and art history, and enjoys exploring these fields during her free time.",
     "image": "/members/fiona.png",
     "linkedin": "https://www.linkedin.com/in/fionako923",
-    "designation": "Active Member"
-  },
-  {
-    "name": "Julie Wan",
-    "role": "Active Member",
-    "pledgeClass": "Fall 23",
-    "major": "Business Administration",
-    "minor": "Digital Studies",
-    "description": "Julie is a junior majoring in Business Administration and minoring in Digital Studies. She is interested in marketing and the beauty industry.",
-    "image": "/members/julie.png",
-    "linkedin": "https://www.linkedin.com/in/julie-wan-usc/",
     "designation": "Active Member"
   },
   {
@@ -237,6 +240,48 @@
     "designation": "Active Member"
   },
   {
+    "name": "Claire Yang",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Applied Mathematics",
+    "description": "Claire is a sophomore majoring in Applied Mathematics. She is passionate about the intersection of business and quantitative problem-solving and enjoys exploring new cafes, nail art, and spending quality time with family and friends.",
+    "image": "/members/claire.png",
+    "linkedin": "https://www.linkedin.com/in/claire-y-yang",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Gloria Pan",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Business Administration",
+    "description": "Gloria is a sophomore majoring in Business Administration with interests in marketing and design. She enjoys film, photography, visiting art museums, and spending time with family and friends.",
+    "image": "/members/gloria.png",
+    "linkedin": "https://www.linkedin.com/in/gloriaapan/",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Evan Zhang",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Business Administration",
+    "minor": "Artificial Intelligence Applications",
+    "description": "Evan is a junior majoring in Business Administration with a minor in AI Applications. He is passionate about product management and enjoys hiking, traveling, and discovering new cafes.",
+    "image": "/members/evan.png",
+    "linkedin": "https://www.linkedin.com/in/evanzhang7",
+    "designation": "Active Member"
+  },
+  {
+    "name": "Daniel Yang",
+    "role": "Active Member",
+    "pledgeClass": "Spring 24",
+    "major": "Artificial Intelligence for Business",
+    "minor": "Philosophy",
+    "description": "Daniel is a sophomore majoring in Artificial Intelligence for Business with a minor in Philosophy. He enjoys technology and business for social impact, along with gardening, camping, and cooking.",
+    "image": "/members/daniel.png",
+    "linkedin": "https://www.linkedin.com/in/danielyangdev/",
+    "designation": "Active Member"
+  },
+  {
     "name": "Elena Mao",
     "role": "Active Member",
     "pledgeClass": "Fall 22",
@@ -248,17 +293,6 @@
     "designation": "Active Member"
   },
   {
-    "name": "Anson Chu",
-    "role": "AZ Consulting Head",
-    "pledgeClass": "Spring 23",
-    "major": "Political Economy",
-    "minor": "Law and Technology, Applied Analytics, AI Applications",
-    "description": "Anson is a junior majoring in Political Economy and minoring in Applied Analytics, LawTech, and AI Applications. He enjoys playing volleyball, watching trending shows, and discovering new music in his free time.",
-    "image": "/members/anson.png",
-    "linkedin": "https://www.linkedin.com/in/ansonsch/",
-    "designation": "AZ Head"
-  },
-  {
     "name": "Walker Blackwell",
     "role": "Active Member",
     "pledgeClass": "Fall 23",
@@ -268,28 +302,6 @@
     "linkedin": "https://www.linkedin.com/in/walker-blackwell/",
     "designation": "Active Member"
 
-  },
-  {
-    "name": "Yuna Jang",
-    "role": "UI/UX Head",
-    "pledgeClass": "Spring 23",
-    "major": "B.F.A Design",
-    "second_major": "",
-    "minor": "Web Development",
-    "description": "Yuna is a junior majoring in B.F.A Design and minoring in Web Development. She is passionate about UI/UX design, with experience in graphic design, 3D modeling, and digital platforms. Yuna is focused on creating impactful visual branding and user experiences.",
-    "image": "/members/yuna.png",
-    "linkedin": "https://www.linkedin.com/in/yunajang/",
-    "designation": "UI/UX Head"
-  },
-  {
-    "name": "Amelie Nah",
-    "role": "Active Member",
-    "pledgeClass": "Spring 24",
-    "major": "Biopharmaceutical Sciences",
-    "description": "Amelie is a sophomore majoring in Biopharmaceutical Sciences. She is interested in healthcare consulting and enjoys hiking, swimming, and being active.",
-    "image": "/members/amelie.png",
-    "linkedin": "https://www.linkedin.com/in/amelienah",
-    "designation": "Active Member"
   },
   {
     "name": "Aidan Han",
@@ -403,17 +415,6 @@
     "designation": "Active Member"
   },
   {
-    "name": "Jason Zhang",
-    "role": "Active Member",
-    "pledgeClass": "Spring 24",
-    "major": "Economics",
-    "minor": "Musical Studies",
-    "description": "Jason is a sophomore majoring in Economics with a minor in Musical Studies. He enjoys practicing piano and guitar, hiking, reading, and attending concerts.",
-    "image": "/members/jason.png",
-    "linkedin": "https://www.linkedin.com/in/jczhang05/",
-    "designation": "Active Member"
-  },
-  {
     "name": "Chris Feng",
     "role": "Active Member",
     "pledgeClass": "Spring 24",
@@ -455,17 +456,6 @@
     "description": "Leena is a sophomore majoring in Business Administration with a minor in Artificial Intelligence Applications. She hails from Dallas, TX, and loves listening to jazz and RnB, reading webtoons, and cooking for friends and family. A fun fact about Leena is that she has a dorm cat named Soju, who keeps her company.",
     "image": "/members/leena.png",
     "linkedin": "https://www.linkedin.com/in/leena-van-03113225a/",
-    "designation": "Active Member"
-  },
-  {
-    "name": "Nayeon Koo",
-    "role": "Active Member",
-    "pledgeClass": "Spring 24",
-    "major": "Sociology",
-    "second_major": "Data Science",
-    "description": "Nayeon is a junior double majoring in Sociology and Data Science. She spends her free time building model kits, going on road trips, and hiking with friends. Nayeon is always on the lookout for new places to explore and enjoys the challenge of discovering remote hiking trails.",
-    "image": "/members/nayeon.png",
-    "linkedin": "www.linkedin.com/in/Nayeon-Koo",
     "designation": "Active Member"
   },
   {
@@ -563,16 +553,6 @@
     "designation": "Active Member"
   },
   {
-    "name": "Bea Tan",
-    "role": "Active Member",
-    "pledgeClass": "Fall 24",
-    "major": "Business Administration",
-    "description": "Bea is a freshman majoring in Business Administration. She was born and raised in the Philippines and enjoys painting, photography and playing badminton in her free time.",
-    "image": "/members/bea.png",
-    "linkedin": "https://www.linkedin.com/in/beaashleytan/",
-    "designation": "Active Member"
-  },
-  {
     "name": "Joaquin Posada",
     "role": "Active Member",
     "pledgeClass": "Fall 24",
@@ -592,17 +572,6 @@
     "description": "Jeffery is a sophomore majoring in Political Economy with a minor in AI Applications. In his free time, he enjoys outdoor activities such as going to the beach, running, or golfing.",
     "image": "/members/jeffery.png",
     "linkedin": "www.linkedin.com/in/jefferychae",
-    "designation": "Active Member"
-  },
-  {
-    "name": "Leia Fisher",
-    "role": "Active Member",
-    "pledgeClass": "Fall 24",
-    "major": "Economics",
-    "minor": "Artificial Intelligence Applications",
-    "description": "Leia is a sophomore majoring in Economics and minoring in AI Applications. She is passionate about innovation and the intersection of business, tech, and design.",
-    "image": "/members/leia.png",
-    "linkedin": "www.linkedin.com/in/leiafish/",
     "designation": "Active Member"
   },
   {

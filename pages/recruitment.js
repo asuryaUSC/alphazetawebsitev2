@@ -3,7 +3,6 @@ import Footer from '../components/Footer';
 import HeroBanner from '../components/recruitment/HeroBanner';
 import WhyRushAZ from '../components/recruitment/WhyRushAZ';
 import RecruitmentTimeline from '../components/recruitment/RecruitmentTimeline';
-import ApplyNow from '../components/recruitment/ApplyNow';
 import FAQSection from '../components/recruitment/FAQSection';
 import Head from 'next/head';
 
@@ -20,7 +19,6 @@ const Recruitment = () => {
         <WhyRushAZ />
         <RecruitmentTimeline />
         <FAQSection />
-        <ApplyNow />
       </main>
       <Footer />
     </div>
