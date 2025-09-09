@@ -32,13 +32,13 @@ const RecruitmentTimeline = () => {
       icon: Users,
       title: 'Meet the Chapter',
       date: 'September 8',
-      description: '7-9 PM @ 1335 W 35th Street, Business Casual.'
+      description: '7-9 PM @ 1301 W 22nd Street, Business Casual.'
     },
     {
       icon: Calendar,
       title: 'Speed Dating',
       date: 'September 9',
-      description: '7-9 PM @ 1335 W 35th Street, Business Casual.'
+      description: '7-9 PM @ 1301 W 22nd Street, Business Casual.'
     },
     {
       icon: FileText,
