@@ -110,7 +110,7 @@ const Navbar = () => {
 
         {/* Apply Button - Right */}
         <Link
-          href="https://tally.so/r/nWLPMe"
+          href="https://tally.so/r/mBva57"
           className="absolute right-4 lg:right-6 group"
           prefetch={false}
           target="_blank"
@@ -122,7 +122,7 @@ const Navbar = () => {
             className="relative inline-flex h-10 items-center justify-center rounded-lg bg-gradient-to-r from-[#89CFF0] to-[#7AC0E8] px-4 py-2 text-sm font-semibold text-[#3D2930] shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#89CFF0]/50 disabled:pointer-events-none disabled:opacity-50 overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Fill Out Our Interest Form
+              Apply Now
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           </motion.div>
@@ -205,14 +205,14 @@ const Navbar = () => {
                   className="pt-4 w-full"
                 >
                   <Link
-                    href="https://tally.so/r/nWLPMe"
+                    href="https://tally.so/r/mBva57"
                     className="group relative inline-flex h-14 items-center justify-center rounded-2xl bg-gradient-to-r from-[#89CFF0] to-[#7AC0E8] px-8 py-4 text-lg font-bold text-[#3D2930] shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#89CFF0]/50 disabled:pointer-events-none disabled:opacity-50 overflow-hidden"
                     prefetch={false}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <span className="relative z-10 flex items-center gap-2">
-                      Fill Out Our Interest Form
+                      Apply Now
                       <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
