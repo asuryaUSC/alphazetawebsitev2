@@ -1,6 +1,6 @@
 // components/Footer.js
-import Link from 'next/link';
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import Link from "next/link";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,57 +16,71 @@ const Footer = () => {
           {/* Logo and Copyright */}
           <div className="flex flex-col items-center md:items-start gap-3">
             <div className="flex items-center gap-3">
-              <img 
-                src="/navlogo.png" 
-                alt="Alpha Zeta Logo" 
+              <img
+                src="/navlogo.png"
+                alt="Alpha Zeta Logo"
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-black text-[#3D2930]">Alpha Zeta</span>
+              <span className="text-xl font-black text-[#3D2930]">
+                Alpha Zeta
+              </span>
             </div>
             <p className="text-sm text-[#3D2930]/70 text-center md:text-left">
-              &copy; 2025 Alpha Zeta USC. All rights reserved.
+              &copy; 2026 Alpha Zeta USC. All rights reserved.
             </p>
           </div>
 
           {/* Navigation Links */}
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <nav className="flex gap-6">
-              <Link href="/about-us" className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors">
+              <Link
+                href="/about-us"
+                className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors"
+              >
                 About
               </Link>
-              <Link href="/members" className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors">
+              <Link
+                href="/members"
+                className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors"
+              >
                 Members
               </Link>
-              <Link href="/careers" className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors">
+              <Link
+                href="/careers"
+                className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors"
+              >
                 Careers
               </Link>
-              <Link href="/recruitment" className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors">
+              <Link
+                href="/recruitment"
+                className="text-sm font-medium text-[#3D2930]/80 hover:text-[#89CFF0] transition-colors"
+              >
                 Recruitment
               </Link>
             </nav>
 
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              <a 
-                href="https://www.instagram.com/alphazeta.sc/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.instagram.com/alphazeta.sc/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-2 rounded-full bg-white/50 backdrop-blur-sm border border-[#89CFF0]/20 text-[#3D2930] hover:bg-[#89CFF0] hover:text-white transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" strokeWidth={2.5} />
               </a>
-              <a 
-                href="https://www.linkedin.com/company/alpha-kappa-psi-alpha-zeta/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.linkedin.com/company/alpha-kappa-psi-alpha-zeta/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-2 rounded-full bg-white/50 backdrop-blur-sm border border-[#89CFF0]/20 text-[#3D2930] hover:bg-[#89CFF0] hover:text-white transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" strokeWidth={2.5} />
               </a>
-              <a 
-                href="mailto:alphazeta@gmail.com" 
+              <a
+                href="mailto:alphazeta@gmail.com"
                 className="group p-2 rounded-full bg-white/50 backdrop-blur-sm border border-[#89CFF0]/20 text-[#3D2930] hover:bg-[#89CFF0] hover:text-white transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg"
                 aria-label="Email"
               >
