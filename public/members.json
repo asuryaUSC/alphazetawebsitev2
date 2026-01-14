@@ -1,5 +1,15 @@
 [
   {
+    "name": "Amelie Nah",
+    "role": "President",
+    "pledgeClass": "Spring 24",
+    "major": "Biopharmaceutical Sciences",
+    "description": "Amelie is a Junior majoring in Biopharmaceutical Sciences. She is interested in healthcare consulting and enjoys hiking, swimming, and being active.",
+    "image": "/members/amelie.png",
+    "linkedin": "https://www.linkedin.com/in/amelienah",
+    "designation": "Executive Board"
+  },
+  {
     "name": "Isabella Martinez",
     "role": "Vice President of Professional Development",
     "pledgeClass": "Spring 24",
@@ -330,16 +340,6 @@
     "designation": "Active Member"
   },
   {
-    "name": "Amelie Nah",
-    "role": "Active Member",
-    "pledgeClass": "Spring 24",
-    "major": "Biopharmaceutical Sciences",
-    "description": "Amelie is a Junior majoring in Biopharmaceutical Sciences. She is interested in healthcare consulting and enjoys hiking, swimming, and being active.",
-    "image": "/members/amelie.png",
-    "linkedin": "https://www.linkedin.com/in/amelienah",
-    "designation": "Active Member"
-  },
-  {
     "name": "Jason Zhang",
     "role": "Active Member",
     "pledgeClass": "Spring 24",
@@ -650,10 +650,10 @@
     "name": "Iren Han",
     "role": "Active Member",
     "pledgeClass": "Fall 25",
-    "major": "International Relations (Global Business)",
+    "major": "Business Administration",
     "second_major": "",
     "minor": "",
-    "description": "Iren is a sophomore majoring in International Relations (Global Business). She is currently pursuing a career in consulting. In her free time, she enjoys side questing with friends and running spontaneous plots.",
+    "description": "Iren is a sophomore majoring in Business Administration. She is currently pursuing a career in consulting. In her free time, she enjoys side questing with friends and running spontaneous plots.",
     "image": "/members/iren.png",
     "linkedin": "https://www.linkedin.com/in/irenhan/",
     "designation": "Active Member"

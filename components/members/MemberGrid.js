@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react';
-import { FaLinkedin } from 'react-icons/fa';
-import { animateScroll as scroll } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
+import { motion } from "framer-motion";
 
 const MemberGrid = () => {
   const [members, setMembers] = useState([]);
   const [filteredMembers, setFilteredMembers] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [designationFilter, setDesignationFilter] = useState('');
-  const [pledgeClassFilter, setPledgeClassFilter] = useState('');
-  const [majorFilter, setMajorFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [designationFilter, setDesignationFilter] = useState("");
+  const [pledgeClassFilter, setPledgeClassFilter] = useState("");
+  const [majorFilter, setMajorFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const membersPerPage = 16;
 
   useEffect(() => {
     const fetchMembers = async () => {
-      const response = await fetch('/members.json');
+      const response = await fetch("/members.json");
       const data = await response.json();
       setMembers(data);
       setFilteredMembers(data);
@@ -27,33 +27,56 @@ const MemberGrid = () => {
     let filtered = members;
 
     if (searchTerm) {
-      filtered = filtered.filter(member =>
-        member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        member.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        member.major.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (member.second_major && member.second_major.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        member.description.toLowerCase().includes(searchTerm.toLowerCase())
+      filtered = filtered.filter(
+        (member) =>
+          member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          member.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          member.major.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (member.second_major &&
+            member.second_major
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase())) ||
+          member.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
     if (designationFilter) {
-      filtered = filtered.filter(member => member.designation === designationFilter);
-    }
-
-    if (pledgeClassFilter) {
-      filtered = filtered.filter(member => member.pledgeClass === pledgeClassFilter);
-    }
-
-    if (majorFilter) {
-      filtered = filtered.filter(member =>
-        member.major === majorFilter || (member.second_major && member.second_major === majorFilter)
+      filtered = filtered.filter(
+        (member) => member.designation === designationFilter
       );
     }
 
-    if (!designationFilter && !pledgeClassFilter && !majorFilter && !searchTerm) {
+    if (pledgeClassFilter) {
+      filtered = filtered.filter(
+        (member) => member.pledgeClass === pledgeClassFilter
+      );
+    }
+
+    if (majorFilter) {
+      filtered = filtered.filter(
+        (member) =>
+          member.major === majorFilter ||
+          (member.second_major && member.second_major === majorFilter)
+      );
+    }
+
+    if (
+      !designationFilter &&
+      !pledgeClassFilter &&
+      !majorFilter &&
+      !searchTerm
+    ) {
       filtered = filtered.sort((a, b) => {
-        if (a.designation === 'Executive Board' && b.designation !== 'Executive Board') return -1;
-        if (a.designation !== 'Executive Board' && b.designation === 'Executive Board') return 1;
+        if (
+          a.designation === "Executive Board" &&
+          b.designation !== "Executive Board"
+        )
+          return -1;
+        if (
+          a.designation !== "Executive Board" &&
+          b.designation === "Executive Board"
+        )
+          return 1;
         return 0;
       });
     }
@@ -62,18 +85,47 @@ const MemberGrid = () => {
     setCurrentPage(1);
   }, [searchTerm, designationFilter, pledgeClassFilter, majorFilter, members]);
 
-  const uniquePledgeClasses = [...new Set(members.map(member => member.pledgeClass))];
-  const uniqueMajors = [...new Set(members.flatMap(member => [member.major, member.second_major].filter(Boolean)))];
+  // Sort pledge classes chronologically
+  const pledgeClassOrder = [
+    "Fall 22",
+    "Spring 23",
+    "Fall 23",
+    "Spring 24",
+    "Fall 24",
+    "Spring 25",
+    "Fall 25",
+  ];
+  const uniquePledgeClasses = [
+    ...new Set(members.map((member) => member.pledgeClass)),
+  ].sort((a, b) => {
+    const indexA = pledgeClassOrder.indexOf(a);
+    const indexB = pledgeClassOrder.indexOf(b);
+    // If not found in order array, put at the end
+    if (indexA === -1 && indexB === -1) return 0;
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    return indexA - indexB;
+  });
+  const uniqueMajors = [
+    ...new Set(
+      members.flatMap((member) =>
+        [member.major, member.second_major].filter(Boolean)
+      )
+    ),
+  ];
 
   const indexOfLastMember = currentPage * membersPerPage;
   const indexOfFirstMember = indexOfLastMember - membersPerPage;
-  const currentMembers = filteredMembers.slice(indexOfFirstMember, indexOfLastMember);
+  const currentMembers = filteredMembers.slice(
+    indexOfFirstMember,
+    indexOfLastMember
+  );
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
     scroll.scrollToTop({
       duration: 500,
-      smooth: true
+      smooth: true,
     });
   };
 
@@ -84,22 +136,31 @@ const MemberGrid = () => {
   // Framer Motion Variants
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const textVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5, delay: 0.2 } }
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 0.2 } },
   };
 
   return (
-    <section id="member-grid" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-[#EEF7FF] via-[#E5F2FF] to-[#D6F0FF]">
+    <section
+      id="member-grid"
+      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-[#EEF7FF] via-[#E5F2FF] to-[#D6F0FF]"
+    >
       <div className="container mx-auto px-4 md:px-6">
         {/* Filters */}
         <div className="flex flex-wrap justify-between items-center mb-6">
           <div className="flex flex-wrap gap-4 items-center">
             <div className="flex items-center gap-2">
-              <label htmlFor="designation" className="text-sm text-[#3D2930]">Filter by Designation:</label>
+              <label htmlFor="designation" className="text-sm text-[#3D2930]">
+                Filter by Designation:
+              </label>
               <select
                 id="designation"
                 className="max-w-[200px] p-2 border rounded text-[#3D2930]"
@@ -113,7 +174,9 @@ const MemberGrid = () => {
               </select>
             </div>
             <div className="flex items-center gap-2">
-              <label htmlFor="pledgeClass" className="text-sm text-[#3D2930]">Filter by Pledge Class:</label>
+              <label htmlFor="pledgeClass" className="text-sm text-[#3D2930]">
+                Filter by Pledge Class:
+              </label>
               <select
                 id="pledgeClass"
                 className="max-w-[200px] p-2 border rounded text-[#3D2930]"
@@ -122,12 +185,16 @@ const MemberGrid = () => {
               >
                 <option value="">All</option>
                 {uniquePledgeClasses.map((pledgeClass, index) => (
-                  <option key={index} value={pledgeClass}>{pledgeClass}</option>
+                  <option key={index} value={pledgeClass}>
+                    {pledgeClass}
+                  </option>
                 ))}
               </select>
             </div>
             <div className="flex items-center gap-2">
-              <label htmlFor="major" className="text-sm text-[#3D2930]">Filter by Major:</label>
+              <label htmlFor="major" className="text-sm text-[#3D2930]">
+                Filter by Major:
+              </label>
               <select
                 id="major"
                 className="max-w-[200px] p-2 border rounded text-[#3D2930]"
@@ -136,13 +203,17 @@ const MemberGrid = () => {
               >
                 <option value="">All</option>
                 {uniqueMajors.map((major, index) => (
-                  <option key={index} value={major}>{major}</option>
+                  <option key={index} value={major}>
+                    {major}
+                  </option>
                 ))}
               </select>
             </div>
           </div>
           <div className="flex items-center gap-2 mt-4 sm:mt-0">
-            <label htmlFor="search" className="text-sm text-[#3D2930]">Search:</label>
+            <label htmlFor="search" className="text-sm text-[#3D2930]">
+              Search:
+            </label>
             <input
               id="search"
               type="text"
@@ -164,7 +235,9 @@ const MemberGrid = () => {
               <motion.div
                 key={index}
                 className={`rounded-lg overflow-hidden shadow-md relative h-full flex flex-col ${
-                  member.designation === 'Executive Board' ? 'bg-[#D1E8FF]' : 'bg-white'
+                  member.designation === "Executive Board"
+                    ? "bg-[#D1E8FF]"
+                    : "bg-white"
                 }`}
                 variants={cardVariants}
                 initial="hidden"
@@ -174,30 +247,51 @@ const MemberGrid = () => {
                   src={member.image}
                   alt={member.name}
                   className={`w-full h-64 object-cover object-center ${
-                    member.name === 'Jacob Granados' ? 'object-contain' : 'object-cover'
+                    member.name === "Jacob Granados"
+                      ? "object-contain"
+                      : "object-cover"
                   }`}
-                  style={{ 
-                    aspectRatio: '4/3',
-                    ...(member.name === 'Jacob Granados' && { objectPosition: 'center 20%' })
+                  style={{
+                    aspectRatio: "4/3",
+                    ...(member.name === "Jacob Granados" && {
+                      objectPosition: "center 20%",
+                    }),
                   }}
                 />
                 <div className="p-4 flex flex-col justify-between flex-grow">
                   <div>
-                    <motion.h3 className="text-xl font-bold text-[#3D2930] mb-2" variants={textVariants}>
+                    <motion.h3
+                      className="text-xl font-bold text-[#3D2930] mb-2"
+                      variants={textVariants}
+                    >
                       {member.name}
                     </motion.h3>
-                    <motion.p className="text-sm text-[#3D2930] mb-2 font-semibold" variants={textVariants}>
+                    <motion.p
+                      className="text-sm text-[#3D2930] mb-2 font-semibold"
+                      variants={textVariants}
+                    >
                       {member.role}
                     </motion.p>
-                    <motion.p className="text-sm text-[#3D2930] mb-2 font-medium" variants={textVariants}>
+                    <motion.p
+                      className="text-sm text-[#3D2930] mb-2 font-medium"
+                      variants={textVariants}
+                    >
                       Major: {member.major}
                     </motion.p>
-                    <motion.p className="text-sm text-[#3D2930] mb-4" variants={textVariants}>
+                    <motion.p
+                      className="text-sm text-[#3D2930] mb-4"
+                      variants={textVariants}
+                    >
                       {member.description}
                     </motion.p>
                   </div>
                   <div className="flex justify-between items-center">
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#89CFF0] hover:text-[#3D2930]">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#89CFF0] hover:text-[#3D2930]"
+                    >
                       <FaLinkedin className="w-5 h-5" />
                       <span className="ml-2">View Profile</span>
                     </a>
@@ -239,11 +333,15 @@ const Pagination = ({ currentPage, totalPages, paginate }) => {
   return (
     <nav>
       <ul className="flex space-x-2">
-        {pageNumbers.map(number => (
+        {pageNumbers.map((number) => (
           <li key={number} className="cursor-pointer">
             <a
               onClick={() => paginate(number)}
-              className={`px-3 py-1 rounded-md ${number === currentPage ? 'bg-[#89CFF0] text-[#3D2930]' : 'bg-[#73C2FB] text-[#3D2930]'}`}
+              className={`px-3 py-1 rounded-md ${
+                number === currentPage
+                  ? "bg-[#89CFF0] text-[#3D2930]"
+                  : "bg-[#73C2FB] text-[#3D2930]"
+              }`}
             >
               {number}
             </a>
