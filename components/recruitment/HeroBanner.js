@@ -122,14 +122,14 @@ const RecruitmentHeroBanner = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
-                href="https://tally.so/r/mBva57"
+                href="https://tally.so/r/5B9qOQ"
                 className="group relative inline-flex h-14 items-center justify-center rounded-2xl bg-gradient-to-r from-[#89CFF0] to-[#7AC0E8] px-8 py-4 text-lg font-bold text-[#3D2930] shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3D2930] disabled:pointer-events-none disabled:opacity-50 overflow-hidden"
                 prefetch={false}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Apply Now
+                  Interest Form
                   <svg
                     className="w-5 h-5 transition-transform group-hover:translate-x-1"
                     fill="none"

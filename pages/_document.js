@@ -6,6 +6,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
           <link
             href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
             rel="stylesheet"

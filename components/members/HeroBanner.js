@@ -115,13 +115,13 @@ const HeroBanner = () => {
               </button>
               
               <Link
-                href="https://tally.so/r/mBva57"
+                href="https://tally.so/r/5B9qOQ"
                 className="inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center rounded-2xl border-2 border-[#3D2930]/20 bg-white/50 backdrop-blur-sm px-8 py-4 text-lg font-semibold text-[#3D2930] transition-all duration-300 ease-in-out hover:bg-white/80 hover:border-[#3D2930]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3D2930]"
                 prefetch={false}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Apply Now
+                Interest Form
               </Link>
             </motion.div>
           </motion.div>
