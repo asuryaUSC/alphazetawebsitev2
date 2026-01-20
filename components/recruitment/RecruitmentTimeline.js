@@ -66,7 +66,7 @@ const RecruitmentTimeline = () => {
     {
       icon: HelpCircle,
       title: "Mystery Event",
-      date: "January 5",
+      date: "February 5",
       description: "Invite-only, Dress Casual.",
     },
   ];
