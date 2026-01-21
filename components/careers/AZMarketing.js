@@ -109,7 +109,7 @@ const AZMarketingUIUX = () => {
             </div>
           </motion.div>
 
-          {/* Right Section - Team Card for Gloria Pan */}
+          {/* Right Section */}
           <div className="grid gap-6">
             <motion.div
               className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-auto sm:max-h-[350px] flex-col sm:flex-row"
@@ -137,6 +137,40 @@ const AZMarketingUIUX = () => {
                 </p>
                 <a
                   href="https://www.linkedin.com/in/jenny-jiang2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
+                >
+                  <FaLinkedin className="h-5 w-5" />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </motion.div>
+            <motion.div
+              className="bg-white shadow-lg p-6 rounded-lg space-y-4 flex items-center h-auto sm:h-auto sm:max-h-[350px] flex-col sm:flex-row"
+              custom={0}
+              initial="hidden"
+              animate={controls}
+              variants={cardVariants}
+            >
+              <img
+                src="/members/iren.png"
+                alt="Iren Han"
+                className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
+              />
+              <div className="px-4 max-w-full sm:max-w-[70%]">
+                <h3 className="text-lg font-semibold text-[#3D2930]">
+                  Iren Han
+                </h3>
+                <p className="text-[#3D2930] font-semibold">Marketing Mentor</p>
+                <p className="text-[#3D2930]">
+                  Iren brings experience in branding and visual marketing
+                  through graphic design. She has contributed to the launch of a
+                  full branding campaign and is interested in how strategy,
+                  creativity, and analytics work together in modern marketing.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/irenhan/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
