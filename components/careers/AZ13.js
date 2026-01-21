@@ -1,7 +1,7 @@
-import React from 'react';
-import { FaCheckCircle, FaLinkedin } from 'react-icons/fa';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { FaCheckCircle, FaLinkedin } from "react-icons/fa";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AZ13 = () => {
   const controls = useAnimation();
@@ -13,7 +13,7 @@ const AZ13 = () => {
   // Start animation when in view
   React.useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -28,11 +28,19 @@ const AZ13 = () => {
 
   const textVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
   };
 
   return (
-    <section id="az13" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section
+      id="az13"
+      ref={ref}
+      className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -51,38 +59,40 @@ const AZ13 = () => {
             <div className="space-y-4">
               {[
                 {
-                  title: 'Behaviorals',
+                  title: "Behaviorals",
                   description:
-                    'Preparation for common interview questions about leadership, teamwork, and problem-solving experiences.',
+                    "Preparation for common interview questions about leadership, teamwork, and problem-solving experiences.",
                 },
                 {
-                  title: 'Technicals',
+                  title: "Technicals",
                   description:
-                    'In-depth coverage of financial modeling, valuation techniques, and accounting concepts crucial for IB roles.',
+                    "In-depth coverage of financial modeling, valuation techniques, and accounting concepts crucial for IB roles.",
                 },
                 {
-                  title: 'Interview Prep',
+                  title: "Interview Prep",
                   description:
-                    'Guidance on structuring answers, mock interviews, and strategies to stand out in competitive IB recruitment processes.',
+                    "Guidance on structuring answers, mock interviews, and strategies to stand out in competitive IB recruitment processes.",
                 },
                 {
-                  title: 'IB Overview',
+                  title: "IB Overview",
                   description:
-                    'Comprehensive introduction to investment banking, including deal types, industry trends, and day-to-day responsibilities.',
+                    "Comprehensive introduction to investment banking, including deal types, industry trends, and day-to-day responsibilities.",
                 },
                 {
-                  title: 'Recruiting',
+                  title: "Recruiting",
                   description:
-                    'Insights into networking strategies, resume optimization, and navigating the recruitment timeline for top IB firms.',
+                    "Insights into networking strategies, resume optimization, and navigating the recruitment timeline for top IB firms.",
                 },
               ].map((item, index) => (
                 <div className="flex items-start gap-3" key={index}>
                   <FaCheckCircle
-                    style={{ width: '24px', height: '24px' }}
+                    style={{ width: "24px", height: "24px" }}
                     className="text-[#57A0D3] flex-shrink-0"
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-[#3D2930]">{item.title}</h3>
+                    <h3 className="text-lg font-semibold text-[#3D2930]">
+                      {item.title}
+                    </h3>
                     <p className="text-[#3D2930]">{item.description}</p>
                   </div>
                 </div>
@@ -94,28 +104,28 @@ const AZ13 = () => {
           <div className="grid gap-6">
             {[
               {
-                name: 'Ben Lee',
-                role: 'Investment Banking Mentor, Alpha Zeta',
+                name: "Charlie Huang",
+                role: "Investment Banking Mentor, Alpha Zeta",
                 description:
-                  'Ben is an incoming investment banking analyst at Harris Williams in San Francisco. He previously interned as a summer analyst at the firm and gained experience in wealth and investment management at Wells Fargo Advisors.',
-                image: '/members/ben.png',
-                linkedin: 'https://www.linkedin.com/in/benjaminlee123/',
+                  "Charlie is an incoming investing banking analyst at J.P. Morgan in their San Francisco technology coverage group. He previously interned at the firm this past summer and has additionally interned at CriticalPoint, Centerstone Capital, and Takenaka Partners.",
+                image: "/members/charlie.png",
+                linkedin: "http://linkedin.com/in/charleshuang2004",
               },
               {
-                name: 'Jacob Granados',
-                role: 'Investment Banking Mentor, Alpha Zeta',
+                name: "Jacob Granados",
+                role: "Investment Banking Mentor, Alpha Zeta",
                 description:
-                  'Jacob is an incoming summer analyst at Bank of America in San Francisco, focusing on investment banking within the EGRC group. He currently works as a mergers and acquisitions analyst at Expa, specializing in strategic M&A and growth management.',
-                image: '/members/jacob.png',
-                linkedin: 'https://www.linkedin.com/in/jacobgranados/',
+                  "Jacob is an incoming full time analyst at Bank of America in San Francisco, focusing on investment banking within the EGRC group. He has had previous internships as a mergers and acquisitions analyst at Expa, specializing in strategic M&A and growth management, as well as at Centerstone Capital..",
+                image: "/members/jacob.png",
+                linkedin: "https://www.linkedin.com/in/jacobgranados/",
               },
               {
-                name: 'Brandon Chung',
-                role: 'Investment Banking Mentor, Alpha Zeta',
+                name: "Ella Kang",
+                role: "Investment Banking Mentor, Alpha Zeta",
                 description:
-                  'Brandon is currently an incoming summer analyst at Piper Sandler in San Francisco. He is placed in the consumer retail group at Piper Sandler, where he aims to develop his investment banking skill set.',
-                image: '/members/brandon.png',
-                linkedin: 'https://www.linkedin.com/in/-brandon-chung-/',
+                  "Ella is interning as an investment banking analyst this summer at Goldman Sachs New York. She is involved with the finance clubs at USC and she is very excited to help other people learn about and pursue careers in investment banking.",
+                image: "/members/ella.png",
+                linkedin: "https://www.linkedin.com/in/ella-kang/",
               },
             ].map((teamMember, index) => (
               <motion.div
@@ -132,8 +142,12 @@ const AZ13 = () => {
                   className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
                 />
                 <div className="px-4 max-w-full sm:max-w-[70%]">
-                  <h3 className="text-lg font-semibold text-[#3D2930]">{teamMember.name}</h3>
-                  <p className="text-[#3D2930] font-semibold">{teamMember.role}</p>
+                  <h3 className="text-lg font-semibold text-[#3D2930]">
+                    {teamMember.name}
+                  </h3>
+                  <p className="text-[#3D2930] font-semibold">
+                    {teamMember.role}
+                  </p>
                   <p className="text-[#3D2930]">{teamMember.description}</p>
                   <a
                     href={teamMember.linkedin}

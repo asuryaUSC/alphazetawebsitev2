@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { FaCheckCircle, FaLinkedin } from 'react-icons/fa';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect } from "react";
+import { FaCheckCircle, FaLinkedin } from "react-icons/fa";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AZMarketingUIUX = () => {
   // Animation controls for triggering animations when in view
@@ -13,7 +13,7 @@ const AZMarketingUIUX = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -28,11 +28,19 @@ const AZMarketingUIUX = () => {
 
   const textVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
   };
 
   return (
-    <section id="az-marketing-uiux" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section
+      id="az-marketing-uiux"
+      ref={ref}
+      className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -51,31 +59,50 @@ const AZMarketingUIUX = () => {
             <div className="space-y-4">
               {[
                 {
-                  title: 'Marketing Fundamentals',
-                  description: 'Gain an understanding of marketing strategies and concepts to prepare for future marketing roles.',
+                  title: "Marketing Fundamentals",
+                  description:
+                    "Gain an understanding of marketing strategies and concepts to prepare for future marketing roles.",
                 },
                 {
-                  title: 'UI/UX Principles',
-                  description: 'Learn the foundations of user interface and user experience design to create intuitive and aesthetically pleasing digital experiences.',
+                  title: "UI/UX Principles",
+                  description:
+                    "Learn the foundations of user interface and user experience design to create intuitive and aesthetically pleasing digital experiences.",
                 },
                 {
-                  title: 'Creative Portfolio',
-                  description: 'Develop a portfolio throughout the duration of AZ Marketing & UI/UX to effectively display creative works for recruitment.',
+                  title: "Creative Portfolio",
+                  description:
+                    "Develop a portfolio throughout the duration of AZ Marketing & UI/UX to effectively display creative works for recruitment.",
                 },
                 {
-                  title: 'Digital Marketing Channels',
-                  description: 'Dive into various digital marketing channels, including social media, email, and content marketing, and learn how to leverage them for maximum impact.',
+                  title: "Digital Marketing Channels",
+                  description:
+                    "Dive into various digital marketing channels, including social media, email, and content marketing, and learn how to leverage them for maximum impact.",
                 },
                 {
-                  title: 'Consumer Behavior',
-                  description: 'Understand the motivations and decision-making processes of consumers to create targeted and effective marketing strategies.',
+                  title: "Consumer Behavior",
+                  description:
+                    "Understand the motivations and decision-making processes of consumers to create targeted and effective marketing strategies.",
                 },
               ].map((item, index) => (
-                <div className="flex items-start gap-4" key={index} style={{ alignItems: 'center' }}>
-                  <FaCheckCircle style={{ width: '24px', height: '24px', flexShrink: 0 }} className="text-[#57A0D3]" />
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <h3 className="text-lg font-semibold text-[#3D2930]" style={{ margin: 0 }}>{item.title}</h3>
-                    <p className="text-[#3D2930]" style={{ margin: 0 }}>{item.description}</p>
+                <div
+                  className="flex items-start gap-4"
+                  key={index}
+                  style={{ alignItems: "center" }}
+                >
+                  <FaCheckCircle
+                    style={{ width: "24px", height: "24px", flexShrink: 0 }}
+                    className="text-[#57A0D3]"
+                  />
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <h3
+                      className="text-lg font-semibold text-[#3D2930]"
+                      style={{ margin: 0 }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-[#3D2930]" style={{ margin: 0 }}>
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -92,18 +119,24 @@ const AZMarketingUIUX = () => {
               variants={cardVariants}
             >
               <img
-                src="/members/gloria.png"
-                alt="Gloria Pan"
+                src="/members/jenny.png"
+                alt="Jenny Jiang"
                 className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
-                <h3 className="text-lg font-semibold text-[#3D2930]">Gloria Pan</h3>
+                <h3 className="text-lg font-semibold text-[#3D2930]">
+                  Jenny Jiang
+                </h3>
                 <p className="text-[#3D2930] font-semibold">Marketing Mentor</p>
                 <p className="text-[#3D2930]">
-                  Gloria is a Business Administration student at USC with a passion for marketing and UI/UX design. She has held internships at Manychat, Kaede Gardens, and Gopher Asset Management, where she honed her skills in digital marketing and consumer insights.
+                  Jenny brings a marketing-focused background with experience in
+                  content operations, film production, and data analysis. She
+                  has worked as a marketing strategist at an AI startup and
+                  supported data-driven marketing and content initiatives at
+                  Rednote.
                 </p>
                 <a
-                  href="https://www.linkedin.com/in/gloriaapan/"
+                  href="https://www.linkedin.com/in/jenny-jiang2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"

@@ -1,7 +1,7 @@
-import React from 'react';
-import { FaCheckCircle, FaLinkedin } from 'react-icons/fa';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { FaCheckCircle, FaLinkedin } from "react-icons/fa";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AZC = () => {
   const controls = useAnimation();
@@ -13,7 +13,7 @@ const AZC = () => {
   // Start the animation when the section is in view
   React.useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -28,11 +28,19 @@ const AZC = () => {
 
   const textVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
   };
 
   return (
-    <section id="azc" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]">
+    <section
+      id="azc"
+      ref={ref}
+      className="w-full py-12 md:py-24 lg:py-32 bg-[#EFF7FF]"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -51,31 +59,50 @@ const AZC = () => {
             <div className="space-y-4">
               {[
                 {
-                  title: 'Industry Overview',
-                  description: 'Learn about Consulting as an industry, what the job entails, the job opportunities that are available, and how to obtain them.',
+                  title: "Industry Overview",
+                  description:
+                    "Learn about Consulting as an industry, what the job entails, the job opportunities that are available, and how to obtain them.",
                 },
                 {
-                  title: 'Casing',
-                  description: 'Through a semester-long program of hands-on workshops, learn the foundations of how to execute a case interview (Market Sizing, Frameworks, Analysis, Brainstorming, and more!).',
+                  title: "Casing",
+                  description:
+                    "Through a semester-long program of hands-on workshops, learn the foundations of how to execute a case interview (Market Sizing, Frameworks, Analysis, Brainstorming, and more!).",
                 },
                 {
-                  title: 'Recruiting Prep',
-                  description: 'Get a step-by-step detailed timeline of what you can do to maximize your chances at success when it comes to recruiting for a Consulting role.',
+                  title: "Recruiting Prep",
+                  description:
+                    "Get a step-by-step detailed timeline of what you can do to maximize your chances at success when it comes to recruiting for a Consulting role.",
                 },
                 {
-                  title: 'Networking',
-                  description: 'Gain a deep network of Alpha Zeta actives and alumni who have landed offers at all MBB and Big 4 firms.',
+                  title: "Networking",
+                  description:
+                    "Gain a deep network of Alpha Zeta actives and alumni who have landed offers at all MBB and Big 4 firms.",
                 },
                 {
-                  title: 'Interview Preparation',
-                  description: 'Receive guidance on how to best prepare for consulting interviews, including mock interviews and feedback sessions.',
+                  title: "Interview Preparation",
+                  description:
+                    "Receive guidance on how to best prepare for consulting interviews, including mock interviews and feedback sessions.",
                 },
               ].map((item, index) => (
-                <div className="flex items-start gap-4" key={index} style={{ alignItems: 'center' }}>
-                  <FaCheckCircle style={{ width: '24px', height: '24px', flexShrink: 0 }} className="text-[#57A0D3]" />
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <h3 className="text-lg font-semibold text-[#3D2930]" style={{ margin: 0 }}>{item.title}</h3>
-                    <p className="text-[#3D2930]" style={{ margin: 0 }}>{item.description}</p>
+                <div
+                  className="flex items-start gap-4"
+                  key={index}
+                  style={{ alignItems: "center" }}
+                >
+                  <FaCheckCircle
+                    style={{ width: "24px", height: "24px", flexShrink: 0 }}
+                    className="text-[#57A0D3]"
+                  />
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <h3
+                      className="text-lg font-semibold text-[#3D2930]"
+                      style={{ margin: 0 }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-[#3D2930]" style={{ margin: 0 }}>
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -92,18 +119,26 @@ const AZC = () => {
               variants={cardVariants}
             >
               <img
-                src="/members/anson.png"
-                alt="Anson Chu"
+                src="/members/sunny.png"
+                alt="Sunny Wang"
                 className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
-                <h3 className="text-lg font-semibold text-[#3D2930]">Anson Chu</h3>
-                <p className="text-[#3D2930] font-semibold">Consulting Mentor, Alpha Zeta</p>
+                <h3 className="text-lg font-semibold text-[#3D2930]">
+                  Sunny Wang
+                </h3>
+                <p className="text-[#3D2930] font-semibold">
+                  Consulting Mentor, Alpha Zeta
+                </p>
                 <p className="text-[#3D2930]">
-                  Anson is currently an incoming associate consultant intern at Bain & Company San Francisco. With experience working with early-stage startups, he hopes to utilize his ground-up business acumen to solve modern business problems.
+                  Sunny is currently an incoming Technology Risk intern at Ernst
+                  & Young in Los Angeles. With a range of experience working in
+                  startups, boutique M&A, and social impact consulting, Sunny
+                  hopes to leverage her knowledge to solve complex business
+                  problems.
                 </p>
                 <a
-                  href="https://www.linkedin.com/in/ansonsch/"
+                  href="https://www.linkedin.com/in/sunny-r-wang"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
@@ -122,18 +157,27 @@ const AZC = () => {
               variants={cardVariants}
             >
               <img
-                src="/members/eddie.png"
-                alt="Eddie Wang"
+                src="/members/sahil.png"
+                alt="Sahil Harjani"
                 className="w-32 h-48 rounded-[50%/25%] object-cover object-center mb-4 sm:mb-0 sm:mr-4"
               />
               <div className="px-4 max-w-full sm:max-w-[70%]">
-                <h3 className="text-lg font-semibold text-[#3D2930]">Eddie Wang</h3>
-                <p className="text-[#3D2930] font-semibold">Consulting Mentor, Alpha Zeta</p>
+                <h3 className="text-lg font-semibold text-[#3D2930]">
+                  Sahil Harjani
+                </h3>
+                <p className="text-[#3D2930] font-semibold">
+                  Consulting Mentor, Alpha Zeta
+                </p>
                 <p className="text-[#3D2930]">
-                  Eddie is currently an analyst at a stealth startup in San Francisco. He previously held internships at Keenly, Inc., and Citi, where he gained expertise in business research and market research.
+                  Sahil is a sophomore at the University of Southern California
+                  studying Economics and Data Science. He has experience across
+                  consulting, data analytics, and social impact work, and
+                  currently serves in leadership roles with 180 Degrees
+                  Consulting and LACI, where he focuses on data-driven strategy
+                  and stakeholder engagement.
                 </p>
                 <a
-                  href="https://www.linkedin.com/in/edwardwngg/"
+                  href="https://www.linkedin.com/in/sahil-harjani-6b1632238"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#57A0D3] hover:underline inline-flex items-center space-x-2"
