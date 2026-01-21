@@ -169,7 +169,6 @@ const MemberGrid = () => {
               >
                 <option value="">All</option>
                 <option value="Executive Board">Executive Board</option>
-                <option value="AZ Head">AZ Group Head</option>
                 <option value="Active Member">Active Member</option>
               </select>
             </div>
