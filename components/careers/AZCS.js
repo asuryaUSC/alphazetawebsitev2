@@ -1,7 +1,7 @@
-import React from 'react';
-import { FaCheckCircle, FaLinkedin } from 'react-icons/fa';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { FaCheckCircle, FaLinkedin } from "react-icons/fa";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AZCS = () => {
   const controls = useAnimation();
@@ -12,7 +12,7 @@ const AZCS = () => {
 
   React.useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -27,11 +27,19 @@ const AZCS = () => {
 
   const textVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
   };
 
   return (
-    <section id="az-cs" ref={ref} className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]">
+    <section
+      id="az-cs"
+      ref={ref}
+      className="w-full py-12 md:py-24 lg:py-32 bg-[#E5F2FF]"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 px-4 md:px-6 lg:px-0">
           {/* Left Section */}
@@ -50,32 +58,42 @@ const AZCS = () => {
             <div className="space-y-6">
               {[
                 {
-                  title: 'Fundamentals of Coding',
-                  description: 'Master the foundational concepts of computer science, including algorithms, data structures, and problem-solving techniques.',
+                  title: "Fundamentals of Coding",
+                  description:
+                    "Master the foundational concepts of computer science, including algorithms, data structures, and problem-solving techniques.",
                 },
                 {
-                  title: 'Leetcode and Interview Prep',
-                  description: 'Prepare for coding interviews with hands-on practice on Leetcode, focusing on algorithmic challenges, coding problems, and whiteboard exercises.',
+                  title: "Leetcode and Interview Prep",
+                  description:
+                    "Prepare for coding interviews with hands-on practice on Leetcode, focusing on algorithmic challenges, coding problems, and whiteboard exercises.",
                 },
                 {
-                  title: 'Recruiting',
-                  description: 'Get detailed insights into recruiting strategies, building a strong resume, networking, and landing top technical roles in the tech industry.',
+                  title: "Recruiting",
+                  description:
+                    "Get detailed insights into recruiting strategies, building a strong resume, networking, and landing top technical roles in the tech industry.",
                 },
                 {
-                  title: 'Practical Research in ML',
-                  description: 'Engage in comprehensive machine learning research and complete a paper by the end of the semester to enhance your resume and technical portfolio.',
+                  title: "Practical Research in ML",
+                  description:
+                    "Engage in comprehensive machine learning research and complete a paper by the end of the semester to enhance your resume and technical portfolio.",
                 },
                 {
-                  title: 'Building Your Own Project',
-                  description: 'Gain practical experience by working on your own projects, a crucial step for success in the tech industry.',
+                  title: "Building Your Own Project",
+                  description:
+                    "Gain practical experience by working on your own projects, a crucial step for success in the tech industry.",
                 },
               ].map((item, index) => (
                 <div className="flex items-start gap-4" key={index}>
                   <div className="flex-shrink-0">
-                    <FaCheckCircle style={{ width: '24px', height: '24px' }} className="text-[#57A0D3]" />
+                    <FaCheckCircle
+                      style={{ width: "24px", height: "24px" }}
+                      className="text-[#57A0D3]"
+                    />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#3D2930]">{item.title}</h3>
+                    <h3 className="text-lg font-semibold text-[#3D2930]">
+                      {item.title}
+                    </h3>
                     <p className="text-[#3D2930]">{item.description}</p>
                   </div>
                 </div>
@@ -87,20 +105,21 @@ const AZCS = () => {
           <div className="grid gap-6">
             {[
               {
-                name: 'Aaditya Surya',
-                role: 'Computer Science Mentor, Alpha Zeta',
+                name: "Tommy Wickersham",
+                role: "Computer Science Mentor, Alpha Zeta",
                 description:
-                  'Aaditya has 5 years of experience in machine learning and has a published paper in both Cornell and Butler libraries. He provides mentorship and guidance to Alpha Zeta students on machine learning research, coding, and technical preparation.',
-                image: '/members/aaditya.png',
-                linkedin: 'https://www.linkedin.com/in/aadityasurya/',
+                  "Tommy has experience across software engineering and machine learning, with a background working on startups and technical projects. His work spans full-stack development, data analysis, and applied AI.",
+                image: "/members/tommy.png",
+                linkedin: "https://www.linkedin.com/in/tommy-wickersham/",
               },
               {
-                name: 'Renee Zhu',
-                role: 'Computer Science Mentor, Alpha Zeta',
+                name: "Rohan Krishnan",
+                role: "Computer Science Mentor, Alpha Zeta",
                 description:
-                  'Renee is a passionate Computer Science and Business joint major, with skills in full-stack web development, system programming, data analysis, and product marketing. She helps Alpha Zeta students navigate complex project landscapes and align technical solutions with strategic goals.',
-                image: '/members/renee.png',
-                linkedin: 'https://www.linkedin.com/in/renee-zhu-4581672b3/',
+                  "Rohan is a returning intern at General Atomics Aeronautical systems Inc, where he will be using Machine Learning to help fight the war on terror.  Using his expertise in Artificial Intelligence, he hopes to one day find cures to neurodegenerative diseases.",
+                image: "/members/rohan.png",
+                linkedin:
+                  "https://www.linkedin.com/in/rohan-krishnan-436076209/",
               },
             ].map((teamMember, index) => (
               <motion.div
@@ -117,8 +136,12 @@ const AZCS = () => {
                   className="w-32 h-48 rounded-[50%/25%] object-cover object-center"
                 />
                 <div className="px-4">
-                  <h3 className="text-lg font-semibold text-[#3D2930]">{teamMember.name}</h3>
-                  <p className="text-[#3D2930] font-semibold">{teamMember.role}</p>
+                  <h3 className="text-lg font-semibold text-[#3D2930]">
+                    {teamMember.name}
+                  </h3>
+                  <p className="text-[#3D2930] font-semibold">
+                    {teamMember.role}
+                  </p>
                   <p className="text-[#3D2930]">{teamMember.description}</p>
                   <a
                     href={teamMember.linkedin}

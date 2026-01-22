@@ -25,7 +25,7 @@ const Recruitment = () => {
       <main className="flex-grow">
         <AZ13 />
         <AZC />
-        {/* <AZCS /> */}
+        <AZCS />
         {/* <AZEntre />  commmented for SP 2025*/}
         <AZPM />
         <AZMarketing />
